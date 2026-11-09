@@ -1,6 +1,7 @@
 ## Various J2ME mappings in Enigma format
 Most of these games are interesting to me, but only some other games by the same devs have unobfuscated versions. These mappings were made by me using Recaf.
 - Diamond Rush (Sony Ericsson S700 version 1.2.0) remapped from Platinum Solitaire (my419X) / Platinum Sudoku (Z370) / Full House Bingo (L6) / Mission Impossible III (6131) - only 2 engine classes match at all
+- Rayman Raving Rabbids (Sony Ericsson K750 version 1.0.2) remapped from Prince of Persia The Two Thrones (Moto V8) - only 2 engine classes match at all
 - WALL-E (Sony Ericsson 240x320) remapped from Star Wars: Cantina (LG) - 2 classes match (one of the matches is large)
 - Bounce Tales (Nokia 7210 Supernova) remapped from Totomi / Burnout (BlackBerry) / Need for Speed: Carbon (Nokia/Motorola) - only 4 engine classes match
 - Ratatouille: Cheese Rush (Sony Ericsson K800i) remapped from Star Wars: Cantina (LG) - 2 classes match (one of the matches is large)
