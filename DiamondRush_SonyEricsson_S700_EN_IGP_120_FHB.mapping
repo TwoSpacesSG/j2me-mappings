@@ -1,0 +1,4 @@
+CLASS a ASprite
+	FIELD h _map_char [B
+	METHOD a GetAFrames (I)I
+	METHOD b GetFModules (I)I
