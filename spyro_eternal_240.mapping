@@ -1,10 +1,6 @@
 CLASS a AALTileset
 	FIELD a m_image Ljavax/microedition/lcdui/Image;
 	FIELD a m_rectsShort [J
-	METHOD a getTileWidth (I)I
-	METHOD a drawTile (III)V
-	METHOD a createTileset (Ljava/lang/String;[J[B[B)La;
-	METHOD b getTileHeight (I)I
 CLASS b AALDevice
 	FIELD a s_width I
 	FIELD a s_instance Lb;
@@ -28,33 +24,14 @@ CLASS b AALDevice
 	FIELD k s_clearSoftkeyCommandIndex I
 	FIELD l s_commandReceivedIndexAsync I
 	FIELD m s_virtualKeysPressedAsync I
-	METHOD a removeAllCommands ()V
-	METHOD a soundIsSupported ()Z
-	METHOD a getCommandIndexFromSoftkey (I)I
-	METHOD a createPngImage (I)Ljava/io/DataInputStream;
-	METHOD a soundStop (I)V
-	METHOD a soundPlay (II)V
 	METHOD a viewportSetBounds (IIII)V
-	METHOD a readFilerefChunkIntegerValue (Ljava/lang/String;)I
-	METHOD a openFileAsStream (Ljava/lang/String;)Ljava/io/DataInputStream;
-	METHOD a p (Ljava/lang/String;)V
 	METHOD a soundSetEnabled (Z)V
 	METHOD b updateCommandHandler ()V
 	METHOD b vibrationIsSupported ()Z
 	METHOD b getVirtualKeyCodeFromRawKeyCode (I)I
-	METHOD b vibrationStart (I)V
-	METHOD b vibrationSetEnabled (Z)V
 	METHOD c clearKeyStates ()V
 	METHOD c soundIsEnabled ()Z
-	METHOD c addCommand (I)V
 	METHOD d updateKeyboardHandler ()V
-	METHOD d onSoftkeyPressed (I)V
-	METHOD e cleanup ()V
-	METHOD e openVolume (I)V
-	METHOD f soundCloseCurrentPlayer ()V
-	METHOD hideNotify outOfHolster ()V
-	METHOD keyReleased vibrationUpdate (I)V
-	METHOD showNotify inHolster ()V
 CLASS c AALMidlet
 	FIELD a s_elapsedTimeReal I
 	FIELD a s_currentTimeStamp J
@@ -68,17 +45,8 @@ CLASS c AALMidlet
 	FIELD c s_midletState I
 	FIELD c s_dispatchPauseApp Z
 	METHOD a exit ()V
-	METHOD a notifyExternalEvent (I)V
-	METHOD a outputMemoryUsage (Ljava/lang/String;)V
-	METHOD pauseApp paint ()V
 CLASS d GTKAnim
 	FIELD a m_modelLayerDataArrayShort [S
 	FIELD b m_modelBehaviour I
 	FIELD b m_modelFrameTimeLimit [S
 	METHOD a getLoopMode ()I
-	METHOD a startInstanceAtFrame (I)I
-	METHOD a setLoopMode (I)V
-	METHOD a updateInstance (II)I
-	METHOD a loadAnimation (II)Ld;
-	METHOD a addFrameLayer (IIIIII)V
-	METHOD a drawInstance (ILa;III)V

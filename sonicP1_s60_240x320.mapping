@@ -5,10 +5,8 @@ CLASS a DistantBg
 	FIELD a zoneBGColTable [I
 	FIELD d zoneNo I
 	METHOD a destroyParts ()V
-	METHOD a setStage (II)V
 	METHOD a drawSlices (Ljavax/microedition/lcdui/Graphics;IIII[I)I
 	METHOD a drawBG (Ljavax/microedition/lcdui/Graphics;IIZ)V
-	METHOD a drawFullParallax (Ljavax/microedition/lcdui/Graphics;II[I)V
 CLASS b MainCanvasDraw
 	METHOD a ObjectMoveChk (IIII)Z
 	METHOD a drawBossSegment (IIII[I)V
@@ -38,7 +36,6 @@ CLASS b MainCanvasDraw
 	METHOD aX marble_platform_draw ()V
 	METHOD aY turi_draw ()V
 	METHOD aZ spike_draw ()V
-	METHOD ab drawField ()V
 	METHOD ac draw ()V
 	METHOD ad drawLoadingWipe ()V
 	METHOD ae objectAction ()V
@@ -83,7 +80,6 @@ CLASS b MainCanvasDraw
 	METHOD bR signal_draw ()V
 	METHOD bS imo_sflag_draw ()V
 	METHOD bT ben_draw ()V
-	METHOD bU yukae_draw ()V
 	METHOD ba box_draw ()V
 	METHOD bb fblock_draw ()V
 	METHOD bc dainfla_draw ()V
@@ -93,7 +89,6 @@ CLASS b MainCanvasDraw
 	METHOD bg shima_draw ()V
 	METHOD bh dai2_draw ()V
 	METHOD bi breakable_draw ()V
-	METHOD bj break2_draw ()V
 	METHOD bk bryuka_draw ()V
 	METHOD bl save_draw ()V
 	METHOD bm kageb_draw ()V
@@ -107,7 +102,6 @@ CLASS b MainCanvasDraw
 	METHOD bu jyama_draw ()V
 	METHOD bv fetama_draw ()V
 	METHOD bw morningstar_draw ()V
-	METHOD bx block_draw ()V
 	METHOD by mfire_draw ()V
 	METHOD bz yoganc_nflag_draw ()V
 	METHOD c drawBossSegment (IIIII)V
@@ -419,14 +413,10 @@ CLASS c MainCanvas
 	METHOD A DrawKira ([I)V
 	METHOD B setHeadHit ()V
 	METHOD B DrawScore ([I)V
-	METHOD C titleFactor ()V
 	METHOD C DrawTama ([I)V
-	METHOD D drawTitle ()V
 	METHOD D drawImoTama ([I)V
 	METHOD E drawLogo ()V
-	METHOD E DrawKazarifire ([I)V
 	METHOD F drawBelt$25decb5 ()V
-	METHOD F DrawFireball ([I)V
 	METHOD G initViewControl ()V
 	METHOD G DrawDBlock ([I)V
 	METHOD H ViewControl ()V
@@ -434,15 +424,11 @@ CLASS c MainCanvas
 	METHOD I moveSysString ()V
 	METHOD I MoveAnimal ([I)V
 	METHOD J drawSysString ()V
-	METHOD J DrawAnimal ([I)V
 	METHOD K initObj2Data ()V
 	METHOD L DriveObj2 ()V
 	METHOD M DrawObj2 ()V
-	METHOD N destroyBossImages ()V
-	METHOD O endBossMode ()V
 	METHOD P moveGHBoss ()V
 	METHOD Q moveMarBoss ()V
-	METHOD R moveContinue ()V
 	METHOD S drawContinue ()V
 	METHOD T moveChaosEmeralds ()V
 	METHOD U drawChaosEmeralds ()V
@@ -450,7 +436,6 @@ CLASS c MainCanvas
 	METHOD W drawEndSequence ()V
 	METHOD X moveEnterName ()V
 	METHOD Y drawEnterName ()V
-	METHOD Z drawGameScore ()V
 	METHOD a PlayerPosX ()I
 	METHOD a preInitBossSY ()V
 	METHOD a softKeyChk ()Z
@@ -465,7 +450,6 @@ CLASS c MainCanvas
 	METHOD a view_yuka (III)V
 	METHOD a IsDistance (III)Z
 	METHOD a DrawMapRegion (IIII)V
-	METHOD a drawMapImage (IIIII)V
 	METHOD a CheckSlide (IIIII)Z
 	METHOD a playerColChk (IIIIII)I
 	METHOD a drawFrame (IIIIII)V
@@ -479,52 +463,40 @@ CLASS c MainCanvas
 	METHOD a read2DIntArray (Ljava/io/DataInputStream;)[[I
 	METHOD a read3DIntArray (Ljava/io/DataInputStream;)[[[I
 	METHOD a getDataStream (Ljava/lang/String;)Ljava/io/DataInputStream;
-	METHOD a getStream (Ljava/lang/String;)Ljava/io/InputStream;
 	METHOD a createWrappedText (Ljava/lang/String;)Ljava/util/Vector;
-	METHOD a doCreateImage (Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
 	METHOD a readByteArray (Ljava/lang/String;)[B
 	METHOD a GetDelim (Ljava/lang/String;I)I
 	METHOD a drawString (Ljava/lang/String;IIII)V
 	METHOD a drawString (Ljava/lang/String;IIIII)V
 	METHOD a drawSysHudString (Ljava/lang/String;IIIZ)V
-	METHOD a drawMenuOption (Ljava/lang/String;IIZ)V
 	METHOD a drawMarqueeTop (Ljava/lang/String;Z)V
-	METHOD a drawRegion (Ljavax/microedition/lcdui/Graphics;Ljavax/microedition/lcdui/Image;IIIIIIIIZ)V
 	METHOD a getZoneBGMNum (Z)I
 	METHOD a changeSelectZoneNumber (Z)V
 	METHOD a drawTitleBG (ZZ)V
-	METHOD a SaveRecordStore ([BLjava/lang/String;)V
 	METHOD a moveStand ([I)V
 	METHOD a removeObjectChk ([I)Z
 	METHOD a moveStand ([II)V
 	METHOD a AraiStand100x ([II)Z
 	METHOD a AraiCheckInside ([III)Z
 	METHOD a destroyImages ([Ljavax/microedition/lcdui/Image;)V
-	METHOD aA loadText ()V
 	METHOD aB loadHUDGraphics ()V
 	METHOD aC waitForKeyPress ()V
 	METHOD aD loadStageImages ()V
 	METHOD aE destroyStageImages ()V
 	METHOD aF InitBoss ()V
-	METHOD aG initBossData ()V
 	METHOD aH startBossMode ()V
-	METHOD aI setFinalSplash$1385ff ()V
 	METHOD aJ destroyEndSequenceImages ()V
 	METHOD aK insertHighscoreIntoTable ()V
-	METHOD aa drawMap$417d9003 ()V
 	METHOD ab loadConfSettings ()V
 	METHOD ac saveGame ()V
-	METHOD ad loadSavedGame ()V
 	METHOD ae saveHighScores ()V
 	METHOD af loadHighscores ()V
-	METHOD ag SetSoftLabel ()V
 	METHOD ah setMapData ()V
 	METHOD ai readStageObject ()V
 	METHOD aj countClear ()V
 	METHOD ak endStageStart ()V
 	METHOD al initStage ()V
 	METHOD am loadStageData ()V
-	METHOD an showNotify ()V
 	METHOD ao play00jump ()V
 	METHOD ap ball00jump ()V
 	METHOD aq jumpcolchk ()V
@@ -535,7 +507,6 @@ CLASS c MainCanvas
 	METHOD av objectInit ()V
 	METHOD aw loopchange ()V
 	METHOD ax drawTitleSonic ()V
-	METHOD ay moveMarquee ()V
 	METHOD az drawMarqueeBottom ()V
 	METHOD b PlayerPosY ()I
 	METHOD b destroyBossSYBlock ()V
@@ -544,14 +515,12 @@ CLASS c MainCanvas
 	METHOD b removeObject (I)V
 	METHOD b fcol (I)Z
 	METHOD b setRaidOnSize (II)V
-	METHOD b blockColChk_Enemy (II)Z
 	METHOD b view_fblock (III)V
 	METHOD b drawLogoLine (IIII)V
 	METHOD b drawFrameCenter (IIIII)V
 	METHOD b ObjectColChk2 (IIIIII)I
 	METHOD b shootObj2 (IIIIII)V
 	METHOD b drawMapSprite (IIIIIIII)V
-	METHOD b LoadRecordStore (Ljava/lang/String;)[B
 	METHOD b GetStringWidth (Ljava/lang/String;I)I
 	METHOD b drawSoftkeys (Z)V
 	METHOD b dirChangeX ([I)V
@@ -569,30 +538,25 @@ CLASS c MainCanvas
 	METHOD c AddObjectData (IIIII)V
 	METHOD c ObjectColChkPl (IIIIII)I
 	METHOD c drawMapSpriteTopLeft (IIIIIIII)V
-	METHOD c drawGameScore (Z)V
 	METHOD c UpdateBossPos ([I)V
 	METHOD c AraiCheckSlide ([I)Z
 	METHOD d getzone_greenhillHsize ()I
 	METHOD d moveSYBoss ()V
 	METHOD d isHiscore ()Z
-	METHOD d scale (I)I
 	METHOD d gotoMenu (I)V
 	METHOD d boundBossHit$4868d30e (II)V
 	METHOD d blockColChk (II)Z
 	METHOD d view_box_ride (III)V
 	METHOD d drawNumber (IIII)V
-	METHOD d initTitle (Z)V
 	METHOD d addObject ([I)V
 	METHOD d charaHitCheck ([I)Z
 	METHOD e fetzone_marbleHSize ()I
 	METHOD e clearKey ()V
 	METHOD e kyuryuchk ()Z
 	METHOD e decodeKey (I)I
-	METHOD e initResource (I)V
 	METHOD e blockColChk_easy (II)Z
 	METHOD e view_dai (III)V
 	METHOD e releaseRings (IIII)V
-	METHOD e playZoneBGM (Z)V
 	METHOD e CallObj2 ([I)V
 	METHOD e bossDefault ([I)Z
 	METHOD f getzone_springyardHSize ()I
@@ -603,7 +567,6 @@ CLASS c MainCanvas
 	METHOD f view_box (III)V
 	METHOD f resultContinue (Z)V
 	METHOD f MoveBakuhatu ([I)V
-	METHOD g resetFrameSkip ()V
 	METHOD g lcol2 ()Z
 	METHOD g getRunningRotation (I)I
 	METHOD g plballwalk (I)V
@@ -611,13 +574,10 @@ CLASS c MainCanvas
 	METHOD g MoveRing ([I)V
 	METHOD h saveConfSettings ()V
 	METHOD h rcol3 ()Z
-	METHOD h objScale (I)I
 	METHOD h keispd (I)V
 	METHOD h ShotScore (III)V
 	METHOD h MoveKira ([I)V
-	METHOD i pause ()V
 	METHOD i lcol3 ()Z
-	METHOD i GetDrawRot (I)I
 	METHOD i updateCameraPositions (I)V
 	METHOD i drawEndLevelScore (III)V
 	METHOD i MoveScore ([I)V
@@ -645,7 +605,6 @@ CLASS c MainCanvas
 	METHOD n MoveBroboTama ([I)V
 	METHOD o initGoleStart ()V
 	METHOD o setPlayerPos ()Z
-	METHOD o SetSoftKey (I)V
 	METHOD o MoveUni2Tama ([I)V
 	METHOD p initStageStart ()V
 	METHOD p fcol ()Z
@@ -659,8 +618,6 @@ CLASS c MainCanvas
 	METHOD s playerPushSet ()V
 	METHOD s play00walk ()Z
 	METHOD s MoveFireball2 ([I)V
-	METHOD showNotify playerBreathChk ()V
-	METHOD t limitchk$1385ff ()V
 	METHOD t ball00walk ()Z
 	METHOD t MoveFireball3 ([I)V
 	METHOD u playdamageset ()V
@@ -688,7 +645,5 @@ CLASS d SoundManager
 	METHOD a soundEnabled ()Z
 	METHOD a setState (I)V
 	METHOD a supportsFormat (I)Z
-	METHOD a playMusic (IIZ)V
 	METHOD a createPlayer (Ljava/lang/String;Ljava/lang/String;)Ljavax/microedition/media/Player;
 	METHOD a killPlayer (Ljavax/microedition/media/Player;)V
-	METHOD b pause$1385ff ()V

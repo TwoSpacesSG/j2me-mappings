@@ -1,0 +1,4 @@
+CLASS h cSoundServer
+	FIELD a _menu Z
+	FIELD b _pending_load_sounds Z
+	FIELD c _finished_loading Z

@@ -1,4 +1,4 @@
-CLASS AppTHQwale AppTHQwale
+CLASS AppTHQwale AppTHQDash
 	FIELD A _forceCustomResourceReload Z
 	FIELD B _outfitsLoaded Z
 	FIELD C _soundsLoaded Z
@@ -94,665 +94,152 @@ CLASS AppTHQwale AppTHQwale
 	FIELD y _pointerActOnDown Z
 	FIELD z _shouldCallStopSoundBeforeResourceLoading Z
 	METHOD A getDebugHints ()I
-	METHOD A getTextForState_Debugger ()Ljava/lang/String;
-	METHOD A initGame ()V
 	METHOD A hook_wasBrowserEnteredFromGetMoreGamesSimple ()Z
-	METHOD A getRightButtonBgOutfit (I)I
-	METHOD A tickAboutStyleView (I)V
-	METHOD A _shouldOutfitBeLoaded (I)Z
 	METHOD B getAmbienceVolumeLevel ()I
 	METHOD B getTextForState_OpenBrowserConfirm ()Ljava/lang/String;
-	METHOD B hook_applicationUnloaded ()V
-	METHOD B hook_isMessageTutorialPhase ()Z
-	METHOD B turnLeft (I)I
-	METHOD B startAnim (I)V
 	METHOD B commandKeyPressed (I)Z
-	METHOD C getNoSoftkeysLayout ()I
-	METHOD C getTextForState_DemoOver ()Ljava/lang/String;
-	METHOD C unloadSplash_THQ ()V
 	METHOD C canOpenBrowser ()Z
-	METHOD C turnRight (I)I
-	METHOD C paintScreen_LevelIntro (I)V
 	METHOD C enterTarget (I)Z
 	METHOD D _getCurrentThreadNumber ()I
-	METHOD D getTextForState_TutorialMessage ()Ljava/lang/String;
 	METHOD D hook_selectLanguage ()V
-	METHOD D hook_isRestartAvailableInPauseMenu ()Z
-	METHOD D cardinalDirectionToAngle (I)I
-	METHOD D stopAnim (I)V
-	METHOD D invokePredicate (I)Z
-	METHOD E getCurrentMeetTheCastPageTitle ()Ljava/lang/String;
-	METHOD E hook_tickPlatformInitialization ()V
-	METHOD E isScrollerTextAtTarget ()Z
-	METHOD E cardinalDirectionToIndex (I)I
-	METHOD E paintScreen_UpgradeMenu (I)V
-	METHOD E isCommandAdded (I)Z
-	METHOD F getCurrentHelpChapterTitle ()Ljava/lang/String;
-	METHOD F _resolveActiveLanguages ()V
-	METHOD F _loadNextResource ()Z
-	METHOD F _getPrevKeyEventBufferIndex (I)I
-	METHOD F cheat (I)V
-	METHOD G getMidletVersion ()Ljava/lang/String;
 	METHOD G restoringLanguageFailed ()V
-	METHOD G _initPlatform ()Z
-	METHOD G positive (I)I
-	METHOD G drawRoundedFill (I)V
 	METHOD H getCurrentLocalHighScorePageTitle ()Ljava/lang/String;
 	METHOD H hook_exitBrowserFromGetMoreGamesSimple ()V
-	METHOD H hook_hasNewCustomerTypesToIntroduce ()Z
-	METHOD H getResourceFromInfo (I)I
-	METHOD H _resetKey (I)V
-	METHOD I getTextForState_AboutView ()Ljava/lang/String;
-	METHOD I _setUpTextBoxForCurrentState ()V
 	METHOD I areCommandsChanged ()Z
-	METHOD I getTypeFromInfo (I)I
-	METHOD I drawRoundedOutline (I)V
-	METHOD J paintState_CareerHighScoreList ()V
-	METHOD J getPointerX (I)I
-	METHOD J paintScreen_HighScoreNameInputScreen_highEnd (I)V
-	METHOD K runThread_Initialization ()V
-	METHOD K getControlAndReset (I)I
-	METHOD K changeDisplayOrientation (I)V
 	METHOD L _unloadPalettes ()V
-	METHOD L acos (I)I
-	METHOD L initScrollerTextPositions (I)V
-	METHOD M paintState_LegalScreen ()V
-	METHOD M getDeltaY (I)I
-	METHOD M tutorialEvent (I)V
-	METHOD N hook_monitorPlatformInitialization ()V
-	METHOD N getDeltaX (I)I
-	METHOD N paintBackground (I)V
-	METHOD O _tick ()V
-	METHOD O getTopPadding (I)I
 	METHOD O _controlSound (I)V
-	METHOD P _vmStopDetected ()V
-	METHOD P atan (I)I
-	METHOD P _commandStop (I)V
-	METHOD Q _hideNotify ()V
 	METHOD Q getTransitionRowIndex (I)I
-	METHOD Q _updateCheatCode (I)V
-	METHOD R _flashDummyCanvas ()V
 	METHOD R getTransitionData (I)I
-	METHOD R _checkCheat (I)V
-	METHOD S _pauseAppImpl ()V
-	METHOD S performOperation (I)V
-	METHOD T _showNotify ()V
 	METHOD T performThreadStart (I)V
-	METHOD U _nimbusStartApp ()V
 	METHOD U enterJunction (I)V
 	METHOD V hook_useSpice ()V
 	METHOD W _startStateMachine ()V
 	METHOD X _pauseStateMachine ()V
 	METHOD Y _stopStateMachine ()V
-	METHOD Z _tickStateMachine ()V
 	METHOD a getCurrentMusic ()I
-	METHOD a getHighEndBackButtonElement ()J
 	METHOD a getTextForState_ExitToOpenBrowserConfirm ()Lg;
 	METHOD a getTextBoxComponent ()Lh;
 	METHOD a getLanguageCode ()Ljava/lang/String;
-	METHOD a getTextForState_LocalHighScore ()Ljavax/microedition/lcdui/Font;
-	METHOD a getTextForState_CareerHighScoreList ()Lk;
-	METHOD a paintState_MeetTheCastView ()V
-	METHOD a isSoundOn ()Z
 	METHOD a getSupportedLanguages ()[Ljava/lang/String;
 	METHOD a _getVolumeLevel (I)I
-	METHOD a getVolumeStatusString (I)La;
-	METHOD a getDebugMessageLine (I)Ld;
 	METHOD a _loadSound (I)Ljava/lang/Object;
 	METHOD a getString (I)Ljava/lang/String;
-	METHOD a _stopLowPriorityPlayer (I)Lk;
-	METHOD a _resetAction (I)V
-	METHOD a paintGraphicsGameButton (I)Z
-	METHOD a charWidth (IC)I
-	METHOD a max (II)I
-	METHOD a toDecimalString (II)Ljavax/microedition/lcdui/Image;
 	METHOD a startThread (II)V
-	METHOD a checkBit (II)Z
 	METHOD a limitBetween (III)I
-	METHOD a getHighScoreList (III)Ld;
 	METHOD a playMusic (III)V
 	METHOD a _createCommand (IIII)I
-	METHOD a defineElement (IIII)J
-	METHOD a toBinaryString (IIII)Lc;
-	METHOD a paintSliderArrow (IIII)V
-	METHOD a _applyImageManipulation (IIIII)V
-	METHOD a _drawCustomOutfit (IIIIII)V
-	METHOD a getListItemHeight_JumpToCareerDayList (IIIZ)I
-	METHOD a getUpgradeAnimFrame (IILjava/lang/String;I)I
-	METHOD a _findRowBaseline (IILjava/lang/String;II)I
-	METHOD a _scrollUpDown (IIZ)I
 	METHOD a _scroll (IIZI)I
-	METHOD a drawTitleBar (ILd;)V
-	METHOD a stringWidth (ILjava/lang/Object;)I
-	METHOD a paintScreen_MainMenu (ILjava/lang/Object;)V
-	METHOD a limitMod (ILjava/lang/Object;II)I
-	METHOD a substringWidth (ILjava/lang/String;I)I
-	METHOD a paintScreen_SelectionBox (ILjava/lang/String;ZLjava/lang/String;)V
-	METHOD a paintScreen_Progress (ILjavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD a _drawSubstring (ILjavax/microedition/lcdui/Graphics;Ljava/lang/Object;IIIII)I
-	METHOD a _drawString (ILjavax/microedition/lcdui/Graphics;Ljava/lang/String;III)I
-	METHOD a enterState (IZ)V
 	METHOD a elementWidth (J)I
-	METHOD a paintStoryTextBoxBackground (JII)V
-	METHOD a _initializeRoot (LAppTHQwale;)V
-	METHOD a paintLegalScreen (La;)V
-	METHOD a _paintPointerDebugEntryScreen (Lc;)V
-	METHOD a paintCantinaOutfit (Ld;)V
 	METHOD a _setTextBox (Lh;)V
-	METHOD a _initTextBox (Lh;IJIII)V
-	METHOD a setCameraTargetNode (Lj;I)V
-	METHOD a paintTableOutfits (Lj;Lj;)V
-	METHOD a paintSoftkeysAsList (Lj;Lj;II)Z
 	METHOD a _readFully (Ljava/io/DataInputStream;[BII)I
-	METHOD a loadResourceToResourceBuffer (Ljava/lang/String;)I
-	METHOD a localizeString (Ljava/lang/String;)Ljava/lang/String;
-	METHOD a _extractStringForChosenLanguage (Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
-	METHOD a paintBarCounterDrink (Ljava/lang/String;)V
-	METHOD a isNodeOnLeftSideOfCantina (Ljava/lang/String;)Z
-	METHOD a paintTutorialDirections (Ljava/lang/String;I)V
 	METHOD a extractToken (Ljava/lang/String;IC)Ljava/lang/String;
-	METHOD a isInRange (Ljava/lang/String;III)Z
-	METHOD a _processSpecialCharacter (Ljava/lang/String;IIIIZZ)I
-	METHOD a loadResourceToResourceBuffer (Ljava/lang/String;IZ)I
 	METHOD a resolveTokenIndex (Ljava/lang/String;Ljava/lang/String;)I
-	METHOD a paintLowCantinaHallBg (Ljava/lang/String;Z)V
-	METHOD a paintCareerEndAnimation (Ljava/lang/String;ZZ)V
 	METHOD a restorePersistentData (Ljava/lang/String;[BI)I
-	METHOD a _expandTag (Ljava/lang/StringBuffer;ILjava/lang/String;)V
-	METHOD a getMugFrame (Ljava/util/Random;I)I
-	METHOD a _closeAppAndLaunchBrowser (Ljavax/microedition/lcdui/Graphics;)V
-	METHOD a _paintStringCheckResults (Ljavax/microedition/lcdui/Graphics;II)V
-	METHOD a _paintFrame (Ljavax/microedition/lcdui/Graphics;III)V
-	METHOD a paintListItem_HelpList (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD a paintListItem_JumpToCareerDayList (Ljavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD a paintParagraphForeground (Ljavax/microedition/lcdui/Graphics;IIIIII)V
-	METHOD a paintFireworkBg (Ljavax/microedition/lcdui/Graphics;IIIILjava/lang/String;III)V
-	METHOD a paintListItemNormal (Ljavax/microedition/lcdui/Graphics;IIIILjava/lang/String;IIIZ)V
-	METHOD a paintCorneredFillRect (Ljavax/microedition/lcdui/Graphics;IIIILjavax/microedition/lcdui/Image;II)V
-	METHOD a paintListItemHighEnd (Ljavax/microedition/lcdui/Graphics;I[BIII)V
-	METHOD a paintFireworkBlast (Ljavax/microedition/lcdui/Graphics;Ljavax/microedition/lcdui/Image;IIII)V
-	METHOD a _loadSoundIntoArray (Ll;)[B
-	METHOD a getSoftKeyCommand (Z)I
 	METHOD a setMusicOn (Z)V
-	METHOD a _loadNextCustomResource (Z)Z
-	METHOD a _setSoundsOn (ZI)V
-	METHOD a loader_groupsForLoadLevelIntro ([B)[B
-	METHOD a readByte ([BI)B
 	METHOD a readChar ([BI)C
 	METHOD a readInt ([BI)I
 	METHOD a readShort ([BI)S
-	METHOD a readBoolean ([BI)Z
 	METHOD a writeByte ([BII)I
 	METHOD a writeBoolean ([BIZ)I
 	METHOD a updateCounter ([CI)I
-	METHOD aA hook_nextStoryScreen ()V
-	METHOD aB paintScrollerText ()V
-	METHOD aC hook_selectNextLegal ()V
-	METHOD aD hook_highScoreNameInputNextItem ()V
-	METHOD aE paintState_IntroduceCustomerType ()V
-	METHOD aF hook_tutorialMessageShown ()V
-	METHOD aG hook_newCustomerTypeIntroduced ()V
-	METHOD aH hook_loadSplashResources ()V
-	METHOD aI deinitializeProperties ()V
-	METHOD aJ hook_selectPreviousLegal ()V
 	METHOD aK skipOutro ()V
-	METHOD aL determineGlobalXOffset ()V
-	METHOD aM hook_enterAboutScreen ()V
 	METHOD aN _resetSpeakCallbackProcessing ()V
-	METHOD aO hook_toggleMusic ()V
-	METHOD aP resetHighScore ()V
-	METHOD aQ _prepareOutfitLoading ()V
-	METHOD aR _clearLists ()V
-	METHOD aS populateListForState_JumpToCareerDay ()V
-	METHOD aT initStory ()V
-	METHOD aU hook_setMenuLoadedFirstTime ()V
-	METHOD aV _checkFonts ()V
-	METHOD aW _triggerCheat ()V
-	METHOD aX toggleGMGSimple ()V
-	METHOD aY _openBrowserFromDestroyApp ()V
-	METHOD aZ paintScreen_StoryIntro ()V
-	METHOD aa refreshCommands ()V
-	METHOD ab _initializeStateMachine ()V
-	METHOD ac paintOutroSplash ()V
-	METHOD ad tickFloaterTexts ()V
 	METHOD ae playMenuMusic ()V
-	METHOD af playGameMusic ()V
 	METHOD ag _startMainLoop ()V
-	METHOD ah _finishOutfitResourceLoading ()V
-	METHOD ai initCheats ()V
 	METHOD aj hook_setSoundsDisabled ()V
 	METHOD ak hook_enableBrowser ()V
-	METHOD al hook_toggleEffects ()V
-	METHOD am populateListForState_LanguageSelection ()V
-	METHOD an hook_startEndlessShift ()V
 	METHOD ao hook_languageChanged ()V
 	METHOD ap load_GMGSimple ()V
 	METHOD aq hook_prepareLanguageMenu ()V
 	METHOD ar hook_enterHighScoreNameInput ()V
-	METHOD as populateListForState_HelpMenu ()V
-	METHOD at resetAnims ()V
-	METHOD au paintState_Intro ()V
-	METHOD av setDefaultLanguageSelection ()V
-	METHOD aw resetGameModes ()V
-	METHOD ax hook_tickGame ()V
-	METHOD ay paintState_LevelResultScreenDemo ()V
-	METHOD az paintState_LevelResultScreenEndlessShift ()V
-	METHOD b _prepareSoundResourceLoading ()I
 	METHOD b createTextBox_Page ()Lh;
-	METHOD b getTextForState_IntroduceCustomerType ()Ljava/lang/String;
-	METHOD b _toggleTestMode ()V
 	METHOD b isMusicOn ()Z
-	METHOD b abs (I)I
-	METHOD b _getPlatformString (I)Ljava/lang/String;
-	METHOD b _getPlayerPlaying (I)Lk;
 	METHOD b stopMusic (I)V
-	METHOD b isAudioListItem (I)Z
-	METHOD b charWidth_CustomFont (IC)I
-	METHOD b min (II)I
-	METHOD b addToCareerModeDayStatistic (II)V
-	METHOD b hasGameTicksElapsedSince (II)Z
-	METHOD b getUpgradeAnimData (III)I
-	METHOD b addFloaterText (III)V
 	METHOD b _controlSound (IIII)V
-	METHOD b _paintVirtualKeypad (IIIII)V
-	METHOD b paintProgressBar (ILjavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD b _drawSubstring (ILjavax/microedition/lcdui/Graphics;Ljava/lang/Object;IIIII)I
 	METHOD b elementHeight (J)I
-	METHOD b paintTextBoxBackground (JII)V
 	METHOD b _calculateTokenCount (Ljava/lang/String;)I
 	METHOD b convertUnicodeToChar (Ljava/lang/String;)Ljava/lang/String;
-	METHOD b addDebugMessage (Ljava/lang/String;)V
-	METHOD b paintTextBoxForwardArrow_TextBox (Ljava/lang/String;Z)V
-	METHOD b storePersistentData (Ljava/lang/String;[BI)I
-	METHOD b setCameraTargetNodeInstantly (Ljavax/microedition/lcdui/Graphics;)V
-	METHOD b _paintFontCheckResults (Ljavax/microedition/lcdui/Graphics;II)V
-	METHOD b setScrollerText (Ljavax/microedition/lcdui/Graphics;III)V
-	METHOD b drawChar_CustomFont (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD b paintListItem_PlatformLanguage (Ljavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD b _getPlatformFont (Z)I
-	METHOD b getSoftKeyLabel (Z)Ljavax/microedition/lcdui/Image;
-	METHOD b _startAppImpl (Z)V
 	METHOD b restoreLanguage ([BI)I
 	METHOD b writeInt ([BII)I
-	METHOD bA _initStyleSupport ()V
-	METHOD bB hook_checkCareerHighScore ()V
-	METHOD bC splashScreenShown ()V
-	METHOD bD paintPlatformBackground ()V
-	METHOD bE paintViewport ()V
-	METHOD bF tickScrollerText ()V
 	METHOD bG initFloaterTexts ()V
-	METHOD bH paintOutroURL ()V
-	METHOD bI hook_enterLevelIntro ()V
 	METHOD bJ execute_initializeGeneratedResources ()V
-	METHOD bK paintState_InitialLoad ()V
-	METHOD bL _prepareCustomResourceLoading ()V
-	METHOD bM _calculateFrameRate ()V
-	METHOD bN resetAllKeys ()V
-	METHOD bO stopGameLogic ()V
 	METHOD bP forceListSelectionChanged ()V
-	METHOD bQ enterExit ()V
-	METHOD bR paintLevelIntroScreen ()V
-	METHOD bS initViewport ()V
-	METHOD bT hook_tickAboutView ()V
-	METHOD bU hook_initBeforeLoadGame ()V
-	METHOD bV _paintState ()V
-	METHOD bW tickCamera ()V
 	METHOD bX restoringOptionsFailed ()V
-	METHOD bY hook_activatePrimarySoftkey ()V
-	METHOD bZ _initDefaultSystemFont ()V
 	METHOD ba hook_pauseGameLogicTutorial ()V
-	METHOD bb hook_resumeGameLogic ()V
 	METHOD bc unload_GMGSimple ()V
 	METHOD bd _finishOutfitLoading ()V
 	METHOD be hook_pauseGameLogic ()V
 	METHOD bf _initSoundSupport ()V
 	METHOD bg hook_startTutorial ()V
-	METHOD bh _populateList ()V
 	METHOD bi playUpgradeMenuMusic ()V
-	METHOD bj playDayEndSuccessJingle ()V
-	METHOD bk playDayEndFailJingle ()V
-	METHOD bl _resetPointerActions ()V
-	METHOD bm hook_jumpToCareerDay ()V
 	METHOD bn hook_setCareerInBetweenDays ()V
 	METHOD bo resetEndlessShift ()V
 	METHOD bp resetWaitressPointerMovement ()V
-	METHOD bq playFireworksEffect ()V
-	METHOD br resetGame ()V
-	METHOD bs hook_prepareIntroducedCustomerTypes ()V
-	METHOD bt populateListForState_GameModeMenu ()V
-	METHOD bu resetOptions ()V
-	METHOD bv paintState_LanguageSelection ()V
-	METHOD bw hook_toggleSounds ()V
-	METHOD bx displaySizeChanged ()V
-	METHOD by hook_adjustSelectedOption ()V
-	METHOD bz hook_handleToggling ()V
-	METHOD c _prepareStringResourceLoading ()I
-	METHOD c getTextForState_MeetTheCastView ()Ljava/lang/String;
-	METHOD c _reinitComponentSupport ()V
 	METHOD c isAmbienceOn ()Z
-	METHOD c sqrtI (I)I
 	METHOD c _getLanguageName (I)Ljava/lang/String;
 	METHOD c setMusicVolumeLevel (I)V
-	METHOD c _loadHighPriorityCustomResource (I)Z
 	METHOD c sin (II)I
-	METHOD c setCamera (II)V
-	METHOD c haveSameGroups (II)Z
-	METHOD c updateHighScore (III)I
-	METHOD c paintHighScoreNameInput (III)V
-	METHOD c paintScreen_HorizontalListWithTextBox (ILjavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD c restoreGameData (Ljava/lang/String;)V
-	METHOD c paintTextBoxForwardArrow_MessageBoxBig (Ljava/lang/String;Z)V
-	METHOD c initializationFailed (Ljavax/microedition/lcdui/Graphics;)V
-	METHOD c _tickAndPaintSimple (Ljavax/microedition/lcdui/Graphics;II)V
-	METHOD c _paintLogic (Ljavax/microedition/lcdui/Graphics;III)V
-	METHOD c paintParagraphBackground (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD c paintListItem_LanguageList (Ljavax/microedition/lcdui/Graphics;IIIII)V
 	METHOD c setShouldCallStopSoundBeforeResourceLoading (Z)V
 	METHOD c storeLanguage ([BI)I
-	METHOD cA unloadGetMoreGamesSimpleResources ()V
 	METHOD cB hook_setSoundsEnabled ()V
-	METHOD cC paintState_AboutView ()V
-	METHOD cD _tickLogic ()V
-	METHOD cE hook_restartGame ()V
-	METHOD cF hook_resumeGameLogicTutorial ()V
-	METHOD cG paintState_LevelIntro ()V
-	METHOD cH initGetMoreGamesSimple ()V
-	METHOD cI paintState_SplashScreensShown ()V
 	METHOD cJ hook_tickEnterHighScoreName ()V
 	METHOD cK hook_stopGameLogic ()V
-	METHOD cL hook_setTutorialPromptShown ()V
-	METHOD cM paintState_LoadResourcesAfterSelectingLanguage ()V
-	METHOD cN paintState_EnterEndlessShiftHighScoreName ()V
-	METHOD cO paintState_EnterCareerHighScoreName ()V
-	METHOD cP paintState_SplashScreen ()V
-	METHOD cQ paintState_CareerResults ()V
-	METHOD cR execute_initializeGMGSimple ()V
-	METHOD cS paintState_GameSummary ()V
-	METHOD cT paintState_InitialWait ()V
-	METHOD cU hook_enterMenu ()V
-	METHOD cV paintState_LoadSplashScreens ()V
-	METHOD cW paintState_StartSplashShow ()V
-	METHOD cX startTutorial ()V
 	METHOD cY _removeConflictingCommands ()V
 	METHOD cZ _executeCommands ()V
-	METHOD ca paintState_MainMenu ()V
-	METHOD cb paintGetMoreGamesSimpleAdvertisement ()V
-	METHOD cc hook_enterLevelResultScreenEndlessShift ()V
-	METHOD cd tickTutorial ()V
-	METHOD ce loadOutroSplash ()V
-	METHOD cf paintEndlessShiftIndicator ()V
-	METHOD cg paintScoreIndicator ()V
-	METHOD ch hook_loadSplashScreen ()V
-	METHOD ci listSelectionChangeHandled ()V
-	METHOD cj hook_tickOutro ()V
 	METHOD ck _pauseMainLoop ()V
-	METHOD cl paintState_VolumeChange ()V
-	METHOD cm paintState_VolumeChangeLong ()V
-	METHOD cn paintState_VolumeChangePause ()V
-	METHOD co paintMenuBackground ()V
-	METHOD cp paintGetMoreGamesSimpleBackground ()V
-	METHOD cq _detectVmHalt ()V
-	METHOD cr paintGetMoreGamesSimpleAlert ()V
-	METHOD cs checkHighScoreNameInputBoundaries ()V
-	METHOD ct runThread_Control ()V
-	METHOD cu hook_disableBrowser ()V
-	METHOD cv createJawaGroupToTable ()V
-	METHOD cw paintQueueSpeechBubble ()V
-	METHOD cx scrollOutCurrentTutorialText ()V
-	METHOD cy paintOutroSummary ()V
-	METHOD cz hook_startCareerEndAnimation ()V
 	METHOD d getProgressStepCount ()I
-	METHOD d getTextForState_LevelResultScreenEndlessShift ()Ljava/lang/String;
-	METHOD d _postPaint ()V
 	METHOD d isSoundEffectsOn ()Z
-	METHOD d _readKeyCodeFromKeyEventBuffer (I)I
-	METHOD d resolveSpecialListItemLabel (I)Ljava/lang/String;
-	METHOD d _refreshSound (I)V
 	METHOD d _isVolumeChanged (I)Z
 	METHOD d shouldDoDelayedKeyDrivenAction (II)I
-	METHOD d paintListBoxBackground (II)V
-	METHOD d isBetweenInclusive (II)Z
-	METHOD d paintFloaterTexts (III)V
-	METHOD d storeGameData (Ljava/lang/String;)V
-	METHOD d paintListForwardArrow_JumpToCareerDayList (Ljava/lang/String;Z)V
-	METHOD d handleMoveNodePaint (Ljavax/microedition/lcdui/Graphics;)V
-	METHOD d _paintAppCanvas (Ljavax/microedition/lcdui/Graphics;II)V
-	METHOD d paintSpeakFX (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD d paintListItem_ExperiencesList (Ljavax/microedition/lcdui/Graphics;IIIII)V
-	METHOD d triggerCommand (Z)V
-	METHOD d storeGameScoring ([BI)I
-	METHOD da _commandStopAllSounds ()V
-	METHOD db _updateNextStringToLoad ()V
-	METHOD dc _initializeDebugMessages ()V
-	METHOD dd enterSelect ()V
-	METHOD de exitGame ()V
-	METHOD destroyApp setDebugConsoleVisible (Z)V
-	METHOD df swapComponentCommands ()V
-	METHOD dg enterCurrentState ()V
-	METHOD dh exitCurrentState ()V
-	METHOD di addNonListCommandsForCurrentState ()V
-	METHOD dj setTimeoutForCurrentState ()V
-	METHOD dk removeNonListCommandsForCurrentState ()V
-	METHOD dl hook_initialize ()V
-	METHOD dm initUIList ()V
-	METHOD dn _initComponentSupport ()V
-	METHOD do advanceSeededRandom ()V
-	METHOD e _prepareOutfitResourceLoading ()I
-	METHOD e getDebuggerTitle ()Ljava/lang/String;
 	METHOD e _stopAllSoundsInstantly ()V
-	METHOD e _loadNextSound ()Z
-	METHOD e sign (I)I
-	METHOD e create_CustomFont (I)Ljava/lang/String;
-	METHOD e _keyPressed (I)V
-	METHOD e paintSplash_THQ (I)Z
-	METHOD e setBit (II)I
-	METHOD e paintDustPuff (II)V
-	METHOD e _isValidType (II)Z
-	METHOD e fillVerticalGradient (III)V
-	METHOD e scrollInTutorialText (Ljava/lang/String;)V
-	METHOD e paintTextBoxBackwardArrow_MessageBoxBig (Ljava/lang/String;Z)V
-	METHOD e paintQueueMoodIndicator (Ljavax/microedition/lcdui/Graphics;)V
-	METHOD e paintListItem_GameModeList (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD e paintOutsideCantinaScenery (Z)V
-	METHOD e restoreGameScoring ([BI)I
-	METHOD f getPointerCount ()I
-	METHOD f _getCustomTextBoxText ()Ljava/lang/String;
 	METHOD f stopAllSounds ()V
-	METHOD f _isAnySoundPlaying ()Z
-	METHOD f _getRowCount (I)I
-	METHOD f getFont (I)Ljava/lang/String;
-	METHOD f _keyReleased (I)V
-	METHOD f isUpgradeUnlocked (I)Z
-	METHOD f smoothAcceleration (II)I
-	METHOD f adjustVolume (II)V
-	METHOD f _isNecessaryToLoadDueToReferencer (II)Z
-	METHOD f playAmbience (III)V
-	METHOD f _prePaint (Ljava/lang/String;)V
-	METHOD f paintListItem_OptionsList (Ljavax/microedition/lcdui/Graphics;IIII)V
-	METHOD f setCameraBySelectedUpgrade (Z)V
 	METHOD g getProgressCurrentStep ()I
 	METHOD g getPrimarySoftKeyLabel ()Ljava/lang/String;
-	METHOD g _tickAudioCommands ()V
-	METHOD g _loadNextString ()Z
-	METHOD g getFontId (I)I
 	METHOD g getGameModeLabel (I)Ljava/lang/String;
-	METHOD g changeLanguage (I)V
-	METHOD g _isActionSet (I)Z
-	METHOD g easeInAndOut (II)I
-	METHOD g _recordableKeyReleased (II)V
-	METHOD g isDayOfType (II)Z
-	METHOD g setCameraTarget (III)V
-	METHOD g _setList (Ljava/lang/String;)V
-	METHOD g paintListItem (Ljavax/microedition/lcdui/Graphics;IIII)V
 	METHOD g destroyApp (Z)V
 	METHOD h getBrowserTheme ()I
 	METHOD h getSecondarySoftKeyLabel ()Ljava/lang/String;
-	METHOD h _loadAudioData ()V
-	METHOD h isCameraAtTarget ()Z
-	METHOD h getAngleByDir (I)I
-	METHOD h getCommandLabel (I)Ljava/lang/String;
-	METHOD h sleep (I)V
 	METHOD h _handleSoftKey (I)Z
-	METHOD h multiply (II)I
-	METHOD h _setDynamicDefaultStyle (II)V
-	METHOD h paintSimpleSplash (II)Z
-	METHOD h paintHighScoreNameInputHighEnd (III)V
-	METHOD h DBG_FAIL (Ljava/lang/String;)V
-	METHOD h paintSuspendedCurtain (Z)V
 	METHOD i getCurrentState ()I
 	METHOD i getTextForState_SoundSelection ()Ljava/lang/String;
 	METHOD i execute_loadOutroSplash ()V
-	METHOD i hook_isMoreLegalsToShow ()Z
-	METHOD i countBits (I)I
-	METHOD i _runningThread (I)V
-	METHOD i stopRequestedForCurrentThread (I)Z
-	METHOD i divide (II)I
-	METHOD i _setPointer (II)V
 	METHOD i _removeCommandsPriorIndex (III)V
-	METHOD i tickHorizontalTextBox (Ljava/lang/String;)V
 	METHOD j getLastKeyPressTime ()I
 	METHOD j getDemoModeMainMenuTitle ()Ljava/lang/String;
-	METHOD j _openSoundDataStreamIfNeeded ()V
-	METHOD j isFullRepaint ()Z
-	METHOD j millisToTicks (I)I
-	METHOD j _unloadCustomResource (I)V
 	METHOD j performCommand (I)Z
-	METHOD j fraction (II)I
-	METHOD j playSoundEffect (II)V
-	METHOD j DBGSTATE (Ljava/lang/String;)V
-	METHOD k resolveSelectedListItemIndex ()I
-	METHOD k getTextForState_UpgradeInfo ()Ljava/lang/String;
 	METHOD k _pauseBackgroundSounds ()V
 	METHOD k _executeLastTrigger ()Z
-	METHOD k getAlignment (I)I
-	METHOD k requestStopThread (I)V
 	METHOD k _sendActionEvent (I)Z
-	METHOD k getLevelProperty (II)I
-	METHOD k drawDish (II)V
-	METHOD k addWaiterCommand (Ljava/lang/String;)V
-	METHOD l getCustomerTypeToIntroduce ()I
-	METHOD l getTextForState_DemoIntro ()Ljava/lang/String;
 	METHOD l _resumeBackgroundSounds ()V
-	METHOD l _loadImage ()Z
-	METHOD l _getGameAction (I)I
 	METHOD l startThread (I)V
-	METHOD l _triggerNow (I)Z
-	METHOD l smoothTowardsValue (II)I
-	METHOD l _updatePointerTranslation (II)V
-	METHOD l exception (Ljava/lang/String;)V
-	METHOD m getGlobalTime ()I
-	METHOD m getMidletName ()Ljava/lang/String;
 	METHOD m _closeSoundDataStreamIfExists ()V
 	METHOD m isDemoModeEnabled ()Z
-	METHOD m getAnimFrameCount (I)I
-	METHOD m moveHighScoreNameInputLetter (I)V
-	METHOD m isMessageboxType (I)Z
-	METHOD m _scrollLeftRight (II)I
-	METHOD m _setVolumeLevel (II)V
-	METHOD m tryOpenBrowser (Ljava/lang/String;)V
 	METHOD n getCurrentStateTimePassed ()I
-	METHOD n getTextForState_UpgradeMenuTutorial ()Ljava/lang/String;
-	METHOD n _initStringSupport ()V
-	METHOD n hook_isLevelStarted ()Z
 	METHOD n sqrtF (I)I
 	METHOD n trigger (I)V
-	METHOD n isTutorialInputAllowed (I)Z
-	METHOD n getPointerX (II)I
-	METHOD n paintListBox (II)V
-	METHOD n ASSERT (Ljava/lang/String;)V
-	METHOD o getCurrentStateTimeTotal ()I
-	METHOD o getTextForState_UpgradeMenuGotAll ()Ljava/lang/String;
-	METHOD o _openStringDataStreamIfNeeded ()V
 	METHOD o mustCloseApplicationBeforeLaunchingBrowser ()Z
-	METHOD o angleToIndex (I)I
-	METHOD o upgradeMenuMove (I)V
-	METHOD o needsFgPaintCallback (I)Z
-	METHOD o addAngles (II)I
-	METHOD o paintMoodIndicator (II)V
-	METHOD o _paintView (Ljava/lang/String;)V
 	METHOD p getSelectedLanguageIndex ()I
-	METHOD p getTextForState_BrowserMessage ()Ljava/lang/String;
-	METHOD p _checkStrings ()V
-	METHOD p hook_wasCareerHighscoreAchieved ()Z
-	METHOD p getTabSize (I)I
-	METHOD p removeNonListCommand (I)V
-	METHOD p isCurrentlySelectedInUpgradeMenu (I)Z
-	METHOD p cos (II)I
-	METHOD p _paintApplicationSuspendedCurtain (Ljava/lang/String;)V
 	METHOD q getPrimarySoftKeyCommand ()I
-	METHOD q _getLocaleLanguage ()Ljava/lang/String;
 	METHOD q forceCustomResourceReload ()V
 	METHOD q cheatsUsed ()Z
 	METHOD q getOppositeAngle (I)I
-	METHOD q resetControl (I)V
-	METHOD q _isIndexedImageNeeded (I)Z
-	METHOD q quantizeAngle (II)I
-	METHOD q setCamera (Ljava/lang/String;)V
 	METHOD r getSecondarySoftKeyCommand ()I
 	METHOD r getTextForState_HelpView ()Ljava/lang/String;
-	METHOD r _initOutfitSupport ()V
-	METHOD r hook_isFirstLegalToShow ()Z
 	METHOD r normalizeAngle (I)I
-	METHOD r paintScreen_HighScoreNameInputScreen_basic (I)V
-	METHOD r isBufferedKeyPressed (I)Z
-	METHOD r getUpgradeSelectionAnimFrame (II)I
 	METHOD s getLanguageCount ()I
 	METHOD s getCurrentAboutPageTitle ()Ljava/lang/String;
-	METHOD s initLayoutNodes ()V
-	METHOD s hook_isStoryInterlude ()Z
 	METHOD s fixedToInt (I)I
-	METHOD s stopAmbience (I)V
-	METHOD s _isKeyPressed (I)Z
-	METHOD s readDatabase (II)I
-	METHOD t getCurrentAmbience ()I
-	METHOD t getTextForState_GameSummary ()Ljava/lang/String;
-	METHOD t resetListItemsForCurrentState ()V
 	METHOD t hook_isResetInOptionsMenu ()Z
-	METHOD t ticksToMillis (I)I
-	METHOD t setAmbienceVolumeLevel (I)V
 	METHOD t _isSoundOn (I)Z
-	METHOD u getNumberOfAvailableUpgrades ()I
-	METHOD u getTextForState_CareerResults ()Ljava/lang/String;
 	METHOD u resetAllActions ()V
-	METHOD u hook_highScoreNameInputMoreAvailable ()Z
-	METHOD u getCustomerOutfitByType (I)I
-	METHOD u changeHighScoreNameInputLetter (I)V
-	METHOD u _commandPlay (I)Z
-	METHOD v getLastKeyReleaseTime ()I
-	METHOD v getTextForState_ShowStory ()Ljava/lang/String;
-	METHOD v hook_tickLanguageSelection ()V
-	METHOD v isInGameState ()Z
-	METHOD v angleToCardinalDirection (I)I
-	METHOD v unlockUpgrade (I)V
 	METHOD v _isNecessaryToLoadDueToReferencer (I)Z
-	METHOD w getMusicVolumeLevel ()I
-	METHOD w getTextForState_StoryFade ()Ljava/lang/String;
 	METHOD w resetKeyPressTimes ()V
-	METHOD w _loadNextImage ()Z
-	METHOD w getOppositeDirection (I)I
-	METHOD w moveSectionPage (I)V
-	METHOD w _shouldLoadSound (I)Z
-	METHOD x peekNextKeyEventType ()I
-	METHOD x getBrowserTitle ()Ljava/lang/String;
-	METHOD x _commitKeyReleases ()V
-	METHOD x canThrowDrinkToDishwasher ()Z
-	METHOD x findSpeechBalloonInsideIndex (I)I
-	METHOD x paintTopText (I)V
-	METHOD x _shouldPlay (I)Z
-	METHOD y getRandomPercentage ()I
-	METHOD y getDemoModeMenuItem ()Ljava/lang/String;
-	METHOD y _initializeDatabase ()V
-	METHOD y hook_canSelectUpgrade ()Z
 	METHOD y intToFixed (I)I
-	METHOD y paintPlatformAlertBox (I)V
-	METHOD y _shouldLoadCustomResource (I)Z
 	METHOD z getSoundEffectVolumeLevel ()I
-	METHOD z getTextForState_DemoOnExit ()Ljava/lang/String;
-	METHOD z paintState_QuitToMenuSaveFailed ()V
-	METHOD z hook_isPlatformInitializedAndSplashScreensShown ()Z
-	METHOD z negative (I)I
-	METHOD z setTutorialTimer (I)V
 	METHOD z _shouldBeLoadedAsAdditionalOutfit (I)Z
+CLASS b AssertionFailedException
+CLASS f AppCanvas
+	METHOD sizeChanged recordableKeyReleased (II)V
 CLASS g Clock
 	FIELD a _totalPauseDuration J
 	FIELD a _parentClock Lg;
@@ -760,9 +247,8 @@ CLASS g Clock
 	FIELD b _pauseTime J
 	FIELD c _startTime J
 	METHOD a nextRandomInt ()I
-	METHOD a getCurrentTime ()J
 	METHOD a start ()V
-	METHOD b _getParentTime ()J
 	METHOD b pause ()V
 	METHOD c stop ()V
 	METHOD d update ()V
+CLASS m DummyCanvas
