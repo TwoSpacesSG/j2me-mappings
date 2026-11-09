@@ -1,7 +1,0 @@
-CLASS a cSprite
-	FIELD a _line_spacing I
-	FIELD b _char_spacing I
-	METHOD a GetAFrameTime (II)I
-	METHOD b DrawPage (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
-CLASS b k
-	FIELD a language I
