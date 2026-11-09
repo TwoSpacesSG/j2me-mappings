@@ -1,7 +1,0 @@
-CLASS a ASprite
-	FIELD a _line_spacing I
-	FIELD b _colume_spacing I
-	METHOD a GetAFrames (I)I
-	METHOD a GetAFrameTime (II)I
-	METHOD b GetFModules (I)I
-	METHOD b DrawPage (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
