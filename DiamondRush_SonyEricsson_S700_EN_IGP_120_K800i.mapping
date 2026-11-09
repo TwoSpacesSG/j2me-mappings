@@ -1,0 +1,17 @@
+CLASS a cSprite
+	FIELD a _line_spacing I
+	FIELD b _char_spacing I
+	METHOD a GetAFrames (I)I
+	METHOD a SetCurrentPalette (I)V
+	METHOD a DecodeImage (I)[I
+	METHOD a GetAFrameTime (II)I
+	METHOD a BuildCacheImages (IIII)V
+	METHOD a UpdateStringSize (Ljava/lang/String;)V
+	METHOD a PaintModule (Ljavax/microedition/lcdui/Graphics;IIII)V
+	METHOD a PaintFModule (Ljavax/microedition/lcdui/Graphics;IIIII)V
+	METHOD a PaintFrame (Ljavax/microedition/lcdui/Graphics;IIIIII)V
+	METHOD a PaintAFrame (Ljavax/microedition/lcdui/Graphics;IIIIIII)V
+	METHOD a DrawString (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+	METHOD a Load ([BI)V
+	METHOD b GetFModules (I)I
+	METHOD b DrawPage (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
