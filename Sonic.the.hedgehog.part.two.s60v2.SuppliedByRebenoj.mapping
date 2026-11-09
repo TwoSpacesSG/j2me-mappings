@@ -1,4 +1,4 @@
-CLASS Sonic
+CLASS Sonic Sonic
 	FIELD a main Lc;
 	FIELD a display Ljavax/microedition/lcdui/Display;
 CLASS a DistantBg
@@ -6,102 +6,131 @@ CLASS a DistantBg
 	FIELD d zoneNo I
 	METHOD a destroyParts ()V
 	METHOD a drawBG (Ljavax/microedition/lcdui/Graphics;IIZ)V
+CLASS b MainCanvasDraw
+	FIELD ObjectListNum FrontObjectQCount I
+	FIELD TIME_WAIT demoLineNo I
+	FIELD resumeScore nakaLevel I
+	METHOD aR save_sflag_move ()V
+	METHOD b ObjectMoveChk (IIII)Z
+	METHOD b CheckSlideInverse (IIIII)Z
+	METHOD bN elevator_draw ()V
+	METHOD bV imo_sflag_move ()V
+	METHOD bW buta_sflag_move ()V
+	METHOD bd mfire_nflag_move ()V
+	METHOD by yukae_draw ()V
+	METHOD c drawBossSegment (IIIII)V
+	METHOD cf uni_sflag_draw ()V
+	METHOD ck fish2_sflag_move ()V
+	METHOD cn brobo_move ()V
+	METHOD e ShotBomb (II)V
 CLASS c MainCanvas
-	FIELD A diecount I
-	FIELD A cheatsAllowed Z
-	FIELD B numOfLives I
-	FIELD B TimerStop Z
-	FIELD C plsaveX I
-	FIELD C drawRingFlag Z
-	FIELD D plsaveY I
-	FIELD D drawTimeFlag Z
-	FIELD E plsaveTime I
-	FIELD E cheatsActive Z
-	FIELD F ZONE_TILE_HIGH I
-	FIELD F cheatCameraFlag Z
-	FIELD G plsaveTime2 I
-	FIELD G cheatInvincibleFlag Z
-	FIELD H bossType I
-	FIELD H cheatBreathFlag Z
-	FIELD H PlayerParam [I
-	FIELD I bossStep I
-	FIELD I doneRepaint Z
-	FIELD I cameraXY [I
-	FIELD J bossAnim I
-	FIELD J drawLivesFlag Z
-	FIELD K bossDir I
-	FIELD L bossAngle I
-	FIELD M bossAngle2 I
-	FIELD M highScores [I
-	FIELD N bossParam1 I
-	FIELD N highScoreDifficulty [I
-	FIELD O bossParam2 I
-	FIELD O emeraldsCoords [I
-	FIELD P bossPosX I
+	FIELD a rotNumTable [I
+	FIELD b drawMapData [[[I
+	FIELD c friendTbl [[B
+	FIELD k water_flag B
+	FIELD C bossAnim I
+	FIELD D bossDir I
+	FIELD E bossAngle I
+	FIELD G bossAngle2 I
+	FIELD H bossParam1 I
+	FIELD I bossParam2 I
+	FIELD J bossPosX I
+	FIELD K bossPosY I
+	FIELD L bossOfsX I
+	FIELD M bossOfsY I
+	FIELD f bossSLSisoo [[S
+	FIELD N bossOriginX I
+	FIELD O bossOriginY I
+	FIELD P bossCount I
 	FIELD P plspeed [I
-	FIELD Q bossPosY I
-	FIELD Q mapViewTarget [I
-	FIELD R bossOfsX I
-	FIELD R mapOfs [I
-	FIELD S bossOfsY I
-	FIELD S mapOfsTarget [I
-	FIELD T bossOriginX I
-	FIELD T zoneActTable2 [I
-	FIELD U bossOriginY I
-	FIELD U poslimit [I
-	FIELD V bossCount I
-	FIELD V alphabetIndices [I
-	FIELD W bossFrame I
-	FIELD X bossFlash I
-	FIELD Y bossStopCount I
-	FIELD Z bossFace I
-	FIELD a activeMenuItems B
-	FIELD a gameDisplayHorCenter I
+	FIELD d initDisplay Z
+	FIELD Q bossFrame I
+	FIELD R bossFlash I
+	FIELD S bossStopCount I
+	FIELD T bossFace I
+	FIELD W mt [I
+	FIELD Y doOverlay Z
 	FIELD a continueStart J
-	FIELD a sound Ld;
-	FIELD a instance Ljava/lang/Object;
-	FIELD a menuItemLabel Ljava/lang/String;
+	FIELD a font Ljavax/microedition/lcdui/Font;
+	FIELD a frameData [[[I
+	FIELD aT SysCenter I
+	FIELD aU SysCount I
+	FIELD b blockLinkTable [B
+	FIELD b configTextOffset [[B
+	FIELD c ploldpos [I
+	FIELD c ObjectList [[I
+	FIELD d m_bScrollLock B
+	FIELD A bossType I
+	FIELD g hitChk2 [B
+	FIELD aY mapViewTypeTemp I
+	FIELD h mapData [B
+	FIELD e rotation [B
+	FIELD f hitChk [B
+	FIELD i mapFrontData [B
+	FIELD c scdtblwk [B
+	FIELD j blockColTable [B
+	FIELD B bossStep I
+	FIELD aX mapViewType I
+	FIELD h pattern B
+	FIELD d imageOffset [B
+	FIELD aZ mapViewCount I
+	FIELD ba mapViewPri I
+	FIELD z BossSBTamaRectTable [[I
+	FIELD A cheatsAllowed Z
 	FIELD a rnd Ljava/util/Random;
-	FIELD a gg Ljavax/microedition/lcdui/Graphics;
-	FIELD a font Ljavax/microedition/lcdui/Image;
+	FIELD af lhit Z
+	FIELD ae rhit Z
+	FIELD bi continueStep I
+	FIELD f PlayerSJump Z
+	FIELD E cheatsActive Z
+	FIELD F cheatCameraFlag Z
+	FIELD G cheatInvincibleFlag Z
+	FIELD v redrawLogoLine Z
+	FIELD H cheatBreathFlag Z
+	FIELD e marqueeString Ljava/lang/String;
+	FIELD I doneRepaint Z
+	FIELD bj continueSonicPosX I
+	FIELD ad HelpTextMore Z
+	FIELD br SysStringMax I
+	FIELD bq marqueePos I
+	FIELD d ContinueSonicTbl [[S
+	FIELD O emeraldsCoords [I
+	FIELD b switchflag2 [Z
+	FIELD c ObjectAct [Z
+	FIELD W bossFrame I
+	FIELD ae waterH2 I
+	FIELD m PlayerDie Z
+	FIELD n PlayerCrouch Z
+	FIELD k PlayerAir Z
+	FIELD p PlayerNoCtrl Z
+	FIELD h PlayerSWater Z
+	FIELD o PlayerNoCol Z
+	FIELD J drawLivesFlag Z
+	FIELD l PlayerBall Z
+	FIELD q TimerClear Z
+	FIELD B TimerStop Z
+	FIELD C drawRingFlag Z
+	FIELD d ploldpos [I
+	FIELD g PlayerDamage Z
+	FIELD j PlayerJump Z
+	FIELD i PlayerBou Z
+	FIELD i m_aaScrollLockPos [[S
+	FIELD j BossSBTamaRectTable [[S
+	FIELD h MoveAnimalTbl [[S
+	FIELD g RectTblDBlock [[S
+	FIELD c fontHeight I
+	FIELD D drawTimeFlag Z
+	FIELD j totalPlayTime I
+	FIELD k olddir I
 	FIELD a midlet Ljavax/microedition/midlet/MIDlet;
-	FIELD a putNowLoading Z
 	FIELD a batAnimTbl [B
 	FIELD a ALPHABET [C
-	FIELD a rotNumTable [I
 	FIELD a PAK_NAMES [Ljava/lang/String;
-	FIELD a m_imgCmd [Ljavax/microedition/lcdui/Image;
-	FIELD a keyPressState [Z
-	FIELD a SystxtTable [[I
-	FIELD a frameData [[[I
 	FIELD aA oldestRepaintTime I
-	FIELD aW gameDisplayVertCenter I
-	FIELD aX n I
-	FIELD aY chaosEmeraldMode I
-	FIELD aZ chaosEmeraldTimer I
-	FIELD aa bossFaceCount I
-	FIELD ab bossHP I
-	FIELD ab draw Z
-	FIELD ac ObjectListNum I
-	FIELD ac firstSetUp Z
-	FIELD ad raidObjectNum I
-	FIELD ad HelpTextMore Z
-	FIELD ae waterH2 I
-	FIELD ae rhit Z
-	FIELD af mode I
-	FIELD af lhit Z
-	FIELD ag zoneNumber I
-	FIELD ag finalDemoExit Z
-	FIELD ah stageNumber I
-	FIELD ah PlayerWater Z
-	FIELD ai selectZoneNumber I
-	FIELD ai PlayerLookUp Z
-	FIELD aj selectStageNumber I
 	FIELD aj MapEndCounter Z
 	FIELD ak pauseSelect I
 	FIELD ak PlayerSub Z
 	FIELD al SetSoftCount I
-	FIELD al PlayerDush Z
 	FIELD am wipeCount I
 	FIELD am ChkVecR Z
 	FIELD an enemyBlock I
@@ -119,361 +148,251 @@ CLASS c MainCanvas
 	FIELD ax cycle I
 	FIELD ay repaints I
 	FIELD az avePaintTime I
-	FIELD b selectedTitleMenuItem B
-	FIELD b frameCount I
-	FIELD b timeStart J
 	FIELD b HelpTextFormatted Ljava/util/Vector;
 	FIELD b HelpFont Ljavax/microedition/lcdui/Font;
 	FIELD b m_imgMimg Ljavax/microedition/lcdui/Image;
-	FIELD b moveRsm Z
-	FIELD b blockLinkTable [B
-	FIELD b TITLE_MENU_LABEL_IDS [I
 	FIELD b softkeyText [Ljava/lang/String;
-	FIELD b m_imgObj [Ljavax/microedition/lcdui/Image;
-	FIELD b switchflag2 [Z
-	FIELD b configTextOffset [[B
-	FIELD b yuka_nflag_ike_yuka [[I
-	FIELD b drawMapData [[[I
-	FIELD bA noloopchecktimer I
-	FIELD bB mapViewType I
-	FIELD bC mapViewTypeTemp I
-	FIELD bD mapViewCount I
-	FIELD bE mapViewPri I
-	FIELD bF MapW I
-	FIELD bG MapH I
-	FIELD bH oldRingCount I
+	FIELD c initDisplay Z
+	FIELD I cameraXY [I
 	FIELD bI oldScoreCount I
 	FIELD bJ oldTimeCount I
-	FIELD bK oldLivesCount I
-	FIELD bL golecount I
-	FIELD bM scoreGetcount I
-	FIELD bN scoreGetcountMax I
+	FIELD bG MapH I
+	FIELD bS nofcolTimer I
+	FIELD bH oldRingCount I
+	FIELD bW RSize I
+	FIELD U bossOriginY I
+	FIELD bU objChkNum I
+	FIELD bT objChkPoint I
+	FIELD V bossCount I
+	FIELD v titleFrames [[I
 	FIELD bO resultRing I
 	FIELD bP resultTime I
 	FIELD bQ blockColCount I
 	FIELD bR PlayerW I
-	FIELD bS nofcolTimer I
-	FIELD bT objChkPoint I
-	FIELD bU objChkNum I
+	FIELD bK oldLivesCount I
+	FIELD bL golecount I
+	FIELD bM scoreGetcount I
+	FIELD bN scoreGetcountMax I
+	FIELD bp ContinueSonicBottomY I
+	FIELD bo ContinueSonicCenterX I
+	FIELD t SysString [[I
+	FIELD bn continueCount I
+	FIELD Q mapViewTarget [I
+	FIELD bF MapW I
 	FIELD bV LSize I
-	FIELD bW RSize I
-	FIELD ba endSequenceMode I
+	FIELD bE mapViewPri I
+	FIELD ag finalDemoExit Z
+	FIELD c loopStart J
+	FIELD c text [Ljava/lang/String;
+	FIELD c limitTable [[[I
+	FIELD F ZONE_TILE_HIGH I
+	FIELD j HelpTextLine B
+	FIELD aj selectStageNumber I
 	FIELD bb sonicEmeraldsMode I
-	FIELD bc sonicEmeraldsTimer I
-	FIELD bd sonicWinTimer I
 	FIELD be sonicWinMode I
 	FIELD bf eggmanTimer I
-	FIELD bg numOfThrows I
-	FIELD bh eggmanEmeraldsMode I
-	FIELD bi continueStep I
-	FIELD bj continueSonicPosX I
-	FIELD bk continueSonicPosY I
-	FIELD bl continueSonicAnim I
-	FIELD bm continueSonicAnim2 I
-	FIELD bn continueCount I
-	FIELD bo ContinueSonicCenterX I
-	FIELD bp ContinueSonicBottomY I
-	FIELD bq marqueePos I
-	FIELD br SysStringMax I
-	FIELD bs SysCount I
-	FIELD bt pushCount I
-	FIELD bu CrouchCount I
-	FIELD bv LookUpCount I
-	FIELD bw plretspd I
-	FIELD bx pljump I
-	FIELD by falltimer I
-	FIELD bz nocoltimer I
-	FIELD c titleMode B
-	FIELD c fontHeight I
-	FIELD c loopStart J
-	FIELD c resourceFileName Ljava/lang/String;
-	FIELD c initDisplay Z
-	FIELD c scdtblwk [B
-	FIELD c TITLE_MENU_MARQUEE_IDS [I
-	FIELD c text [Ljava/lang/String;
-	FIELD c titleImages [Ljavax/microedition/lcdui/Image;
-	FIELD c ObjectAct [Z
-	FIELD c friendTbl [[B
-	FIELD c ObjectList [[I
-	FIELD c limitTable [[[I
-	FIELD d m_bScrollLock B
-	FIELD d scnHeight I
+	FIELD bc sonicEmeraldsTimer I
+	FIELD bd sonicWinTimer I
+	FIELD m cpuTimer I
+	FIELD g onKeyFlag [Z
 	FIELD d timeShouldBe J
-	FIELD d titleImageTrial Ljava/lang/String;
-	FIELD d readStageObjectFlag Z
-	FIELD d imageOffset [B
-	FIELD d ploldpos [I
-	FIELD d ObjectDead [Z
 	FIELD d zoneActTable [[B
 	FIELD d encZoneNumber [[I
-	FIELD d ContinueSonicTbl [[S
+	FIELD bv LookUpCount I
+	FIELD u putWipe Z
+	FIELD ai PlayerLookUp Z
 	FIELD e scnWidth I
+	FIELD d scnHeight I
 	FIELD e timeIs J
-	FIELD e marqueeString Ljava/lang/String;
-	FIELD e showStartTrialDemoSplash Z
-	FIELD e rotation [B
-	FIELD e break_sflag_ike_yuka [I
 	FIELD e switchflag [Z
 	FIELD e encStageNumber [[I
-	FIELD e ContinueSonicTbl2 [[S
-	FIELD f displayWidth I
-	FIELD f PlayerSJump Z
-	FIELD f hitChk [B
-	FIELD f yuka_nflag_yuka_w [I
-	FIELD f highScoreNames [Ljava/lang/String;
+	FIELD b yuka_nflag_ike_yuka [[I
+	FIELD a SystxtTable [[I
+	FIELD ad raidObjectNum I
 	FIELD f cheatSettings [Z
-	FIELD g displayHeight I
-	FIELD g PlayerDamage Z
-	FIELD g hitChk2 [B
-	FIELD g box_sflag_ike_def_X [I
+	FIELD bk continueSonicPosY I
+	FIELD o SysCenter I
 	FIELD g musicFiles [Ljava/lang/String;
-	FIELD g onKeyFlag [Z
-	FIELD g RectTblDBlock [[S
-	FIELD h pattern B
-	FIELD h displayYOffset I
-	FIELD h PlayerSWater Z
-	FIELD h mapData [B
-	FIELD h box_sflag_ike_def_Y [I
-	FIELD h textHowTo [Ljava/lang/String;
-	FIELD h crushing [Z
-	FIELD h MoveAnimalTbl [[S
-	FIELD i selectedIndex B
+	FIELD z timeCountMins I
 	FIELD i TIME_WAIT I
-	FIELD i PlayerBou Z
-	FIELD i mapFrontData [B
+	FIELD h displayYOffset I
+	FIELD f displayWidth I
+	FIELD g displayHeight I
+	FIELD a font Ljavax/microedition/lcdui/Image;
+	FIELD a gameDisplayHorCenter I
+	FIELD h box_sflag_ike_def_Y [I
+	FIELD h crushing [Z
 	FIELD i box_sflag_ike_col_X [I
-	FIELD i m_aaScrollLockPos [[S
-	FIELD j HelpTextLine B
-	FIELD j totalPlayTime I
-	FIELD j PlayerJump Z
-	FIELD j blockColTable [B
+	FIELD c resourceFileName Ljava/lang/String;
+	FIELD d titleImageTrial Ljava/lang/String;
+	FIELD al PlayerDush Z
+	FIELD n numberOfChaosEmeralds I
 	FIELD j box_sflag_ike_col_Y [I
-	FIELD j BossSBTamaRectTable [[S
-	FIELD k olddir I
-	FIELD k PlayerAir Z
-	FIELD k scddirtbl [B
 	FIELD k box_sflag_ike_box_V [I
-	FIELD l ZONE_TILE_ACROSS I
-	FIELD l PlayerBall Z
-	FIELD l oldm_nConfigValue [B
 	FIELD l item_nflag_ike_itemTable [I
-	FIELD m cpuTimer I
-	FIELD m PlayerDie Z
+	FIELD ac firstSetUp Z
+	FIELD t outWipe Z
 	FIELD m configSettings [B
 	FIELD m gole_nflag_ike_rotTable [I
-	FIELD n numberOfChaosEmeralds I
-	FIELD n PlayerCrouch Z
-	FIELD n gole_nflag_ike_kiraTableX [I
-	FIELD o SysCenter I
-	FIELD o PlayerNoCol Z
-	FIELD o gole_nflag_ike_kiraTableY [I
-	FIELD p plmaxspd I
-	FIELD p PlayerNoCtrl Z
-	FIELD p objectData [I
-	FIELD q pladdspd I
-	FIELD q TimerClear Z
-	FIELD q repaintTimes [I
-	FIELD r invinciCounter I
-	FIELD r raidOn Z
-	FIELD r yoganc_nflag_ike_posY [I
-	FIELD s flickerCount I
-	FIELD s SetSoftFlag Z
-	FIELD s zonetable [I
-	FIELD t speedupcount I
-	FIELD t outWipe Z
-	FIELD t sinData [I
-	FIELD t SysString [[I
-	FIELD u bariacount I
-	FIELD u putWipe Z
-	FIELD u rotTable [I
-	FIELD u obj2Data [[I
-	FIELD v oldringcount I
-	FIELD v redrawLogoLine Z
-	FIELD v titleFrames [[I
-	FIELD w ringcount I
 	FIELD w limitBreak Z
+	FIELD b timeStart J
+	FIELD e ContinueSonicTbl2 [[S
+	FIELD h textHowTo [Ljava/lang/String;
+	FIELD c titleImages [Ljavax/microedition/lcdui/Image;
+	FIELD a gg Ljavax/microedition/lcdui/Graphics;
+	FIELD S mapOfsTarget [I
+	FIELD T zoneActTable2 [I
+	FIELD bC mapViewTypeTemp I
+	FIELD bD mapViewCount I
+	FIELD R mapOfs [I
+	FIELD bA noloopchecktimer I
+	FIELD bB mapViewType I
+	FIELD bg numOfThrows I
+	FIELD a sound Ld;
+	FIELD Y bossStopCount I
+	FIELD bz nocoltimer I
+	FIELD n gole_nflag_ike_kiraTableX [I
+	FIELD Z bossFace I
+	FIELD b selectedTitleMenuItem B
+	FIELD ai selectZoneNumber I
+	FIELD bl continueSonicAnim I
+	FIELD bu CrouchCount I
+	FIELD bm continueSonicAnim2 I
+	FIELD ah PlayerWater Z
+	FIELD u bariacount I
+	FIELD l ZONE_TILE_ACROSS I
+	FIELD o gole_nflag_ike_kiraTableY [I
 	FIELD w objectSizeTbl [[I
+	FIELD bx pljump I
+	FIELD bw plretspd I
+	FIELD f yuka_nflag_yuka_w [I
+	FIELD u obj2Data [[I
+	FIELD p plmaxspd I
+	FIELD a instance Ljava/lang/Object;
+	FIELD p objectData [I
+	FIELD H PlayerParam [I
+	FIELD ac ObjectListNum I
+	FIELD ah stageNumber I
+	FIELD N TITLE_MENU_MARQUEE_IDS [I
 	FIELD x scorecount I
+	FIELD y timeCountSecs I
+	FIELD v oldringcount I
+	FIELD w ringcount I
+	FIELD M highScores [I
+	FIELD V alphabetIndices [I
+	FIELD bh eggmanEmeraldsMode I
+	FIELD b moveRsm Z
+	FIELD q repaintTimes [I
+	FIELD r yoganc_nflag_ike_posY [I
+	FIELD X bossFlash I
+	FIELD af mode I
+	FIELD ag zoneNumber I
+	FIELD s SetSoftFlag Z
+	FIELD r raidOn Z
+	FIELD bs SysCount I
+	FIELD bt pushCount I
+	FIELD i selectedIndex B
+	FIELD ab draw Z
+	FIELD q pladdspd I
+	FIELD e break_sflag_ike_yuka [I
+	FIELD s zonetable [I
+	FIELD l oldm_nConfigValue [B
+	FIELD aW gameDisplayVertCenter I
+	FIELD r invinciCounter I
+	FIELD ab bossHP I
+	FIELD aa bossFaceCount I
+	FIELD c titleMode B
+	FIELD b TITLE_MENU_LABEL_IDS [I
+	FIELD b frameCount I
+	FIELD a putNowLoading Z
+	FIELD d ObjectDead [Z
+	FIELD a keyPressState [Z
+	FIELD t sinData [I
+	FIELD e showStartTrialDemoSplash Z
+	FIELD a m_imgCmd [Ljavax/microedition/lcdui/Image;
+	FIELD b m_imgObj [Ljavax/microedition/lcdui/Image;
+	FIELD t speedupcount I
+	FIELD s flickerCount I
+	FIELD by falltimer I
+	FIELD f highScoreNames [Ljava/lang/String;
+	FIELD a activeMenuItems B
+	FIELD u rotTable [I
+	FIELD a menuItemLabel Ljava/lang/String;
 	FIELD x playdamageYogan Z
 	FIELD x objData [[I
-	FIELD y timeCountSecs I
 	FIELD y damageNow Z
-	FIELD z timeCountMins I
 	FIELD z OttotoOn Z
-	METHOD A drawShieldEffect ()V
-	METHOD A DrawRing ([I)V
-	METHOD B addObjectChk ()V
-	METHOD B DrawKira ([I)V
-	METHOD C crushingDeathChk ()V
-	METHOD C DrawScore ([I)V
-	METHOD D DrawTama ([I)V
+	FIELD k scddirtbl [B
+	FIELD U poslimit [I
+	FIELD g box_sflag_ike_def_X [I
 	METHOD E setHeadHit ()V
-	METHOD E drawImoTama ([I)V
-	METHOD F DrawKazarifire ([I)V
-	METHOD H DrawDBlock ([I)V
-	METHOD I drawLogo ()V
-	METHOD I DrawBrkabe ([I)V
-	METHOD J drawBelt$25decb5 ()V
-	METHOD J DrawBossSBTama ([I)V
-	METHOD K initViewControl ()V
+	METHOD K InitViewControl ()V
 	METHOD K MoveAnimal ([I)V
-	METHOD L ViewControl ()V
-	METHOD L DrawAnimal ([I)V
-	METHOD Q initObj2Data ()V
-	METHOD R DriveObj2 ()V
-	METHOD S DrawObj2 ()V
-	METHOD U endBossMode ()V
-	METHOD Y drawContinue ()V
-	METHOD Z moveChaosEmeralds ()V
 	METHOD a PlayerPosX ()I
 	METHOD a dSin (I)I
 	METHOD a playerRaidOn (I)V
-	METHOD a getPlayerArg (II)I
-	METHOD a loadZoneImage (II)V
 	METHOD a searchObject (II)[[I
 	METHOD a GetEnemyFloorY (III)I
 	METHOD a view_dai_ride (III)V
-	METHOD a drawMapImage (IIIII)V
 	METHOD a CheckSlide (IIIII)Z
-	METHOD a playerColChk (IIIIII)I
-	METHOD a drawFrame (IIIIII)V
 	METHOD a SetObj2 (IIIIIII)V
-	METHOD a drawSprite (IIIIIIII)V
 	METHOD a ObjectColChk (IIIIIIIIIIII)I
-	METHOD a IsHitSonic (IIIIZ)I
-	METHOD a addScoreCount (IZ)V
-	METHOD a read1DIntArray (Ljava/io/DataInputStream;)[I
-	METHOD a read2DIntArray (Ljava/io/DataInputStream;)[[I
-	METHOD a read3DIntArray (Ljava/io/DataInputStream;)[[[I
-	METHOD a getDataStream (Ljava/lang/String;)Ljava/io/DataInputStream;
-	METHOD a getStream (Ljava/lang/String;)Ljava/io/InputStream;
-	METHOD a readByteArray (Ljava/lang/String;)[B
-	METHOD a drawString (Ljava/lang/String;IIII)V
-	METHOD a drawString (Ljava/lang/String;IIIII)V
-	METHOD a drawSysHudString (Ljava/lang/String;IIIZ)V
-	METHOD a drawMenuOption (Ljava/lang/String;IIZ)V
-	METHOD a drawMarqueeTop (Ljava/lang/String;Z)V
-	METHOD a getZoneBGMNum (Z)I
-	METHOD a changeSelectZoneNumber (Z)V
-	METHOD a drawTitleBG (ZZ)V
-	METHOD a moveStand ([II)V
-	METHOD a AraiStand100x ([II)Z
+	METHOD a ColliRect2 (I[III)V
+	METHOD a doWipe (Z)Z
 	METHOD a AraiCheckInside ([III)Z
-	METHOD a destroyImages ([Ljavax/microedition/lcdui/Image;)V
-	METHOD aC drawTitleSonic ()V
-	METHOD aE drawMarqueeBottom ()V
-	METHOD aG loadHUDGraphics ()V
-	METHOD aJ InitBoss ()V
-	METHOD aL startBossMode ()V
-	METHOD aN insertHighscoreIntoTable ()V
-	METHOD aa drawChaosEmeralds ()V
-	METHOD ab moveEnterName ()V
-	METHOD ac drawEnterName ()V
-	METHOD ak setMapData ()V
-	METHOD al readStageObject ()V
-	METHOD aq play00jump ()V
-	METHOD as jumpcolchk ()V
+	METHOD aD TK_MoveMarquee ()V
+	METHOD al drawEnding ()V
 	METHOD at levermove ()V
 	METHOD au blevermove ()V
-	METHOD aw checkDieCount ()V
-	METHOD ax objectInit ()V
 	METHOD b PlayerPosY ()I
 	METHOD b rcol2 ()Z
 	METHOD b removeObject (I)V
-	METHOD b validZoneNumber (I)Z
 	METHOD b setRaidOnSize (II)V
-	METHOD b blockColChk_Enemy (II)Z
 	METHOD b view_dai (III)V
-	METHOD b drawFrameCenter (IIIII)V
-	METHOD b ObjectColChk2 (IIIIII)I
-	METHOD b shootObj2 (IIIIII)V
-	METHOD b drawMapSprite (IIIIIIII)V
-	METHOD b drawMapSprite (IIIIIIIII)V
-	METHOD b gluGetClassLoaderResourceStreamByName (Ljava/lang/String;)Ljava/io/InputStream;
-	METHOD b gluGetResource (Ljava/lang/String;)[B
-	METHOD b GetStringWidth (Ljava/lang/String;I)I
-	METHOD b dirChangeX ([I)V
-	METHOD b AraiCheckSlide ([I)Z
+	METHOD b ShotObj2 (IIIIII)V
 	METHOD c lcol2 ()Z
 	METHOD c rnd (I)I
-	METHOD c getTV (I)V
-	METHOD c boundBossHit$4868d30e (II)V
-	METHOD c IsFarDistance (II)Z
-	METHOD c releaseAnimal (III)V
-	METHOD c drawLogoLine (IIII)V
+	METHOD c ShotAnimal (III)V
 	METHOD c AddObjectData (IIIII)V
-	METHOD c ObjectColChkPl (IIIIII)I
-	METHOD c drawMapSpriteTopLeft (IIIIIIII)V
-	METHOD c gluGetClassLoaderResourceArrayByName (Ljava/lang/String;)[B
 	METHOD c UpdateBossPos ([I)V
-	METHOD c charaHitCheck ([I)Z
-	METHOD d getzone_greenhillHsize ()I
 	METHOD d rcol3 ()Z
-	METHOD d scale (I)I
-	METHOD d gotoMenu (I)V
-	METHOD d ShotScore (III)V
-	METHOD d releaseRings (IIII)V
-	METHOD d bossDefault ([I)Z
+	METHOD d blockColChk (II)Z
+	METHOD d _BossDefault ([I)Z
 	METHOD e lcol3 ()Z
-	METHOD e objScale (I)I
-	METHOD e addObject ([I)V
-	METHOD f saveConfSettings ()V
-	METHOD f bossDead ()Z
-	METHOD f initResource (I)V
-	METHOD f setObjData (III)V
-	METHOD f CallObj2 ([I)V
-	METHOD g saveGame ()V
+	METHOD f _BossDead ()Z
 	METHOD g isHitBoss ()Z
 	METHOD g blockdirChk (I)I
-	METHOD g releaseRings (III)V
+	METHOD g Boss4ShotTekkyu (I)V
 	METHOD g MoveBakuhatu ([I)V
-	METHOD h isHiscore ()Z
-	METHOD h getRunningRotation (I)I
-	METHOD h plwalk (I)V
-	METHOD i GetDrawRot (I)I
-	METHOD i plballwalk (I)V
+	METHOD h MoveBakudan ([I)V
 	METHOD i MoveRing ([I)V
-	METHOD j DG ()V
 	METHOD j rcol ()Z
-	METHOD j keispd (I)V
 	METHOD j MoveKira ([I)V
 	METHOD k lcol ()Z
-	METHOD k updateCameraPositions (I)V
 	METHOD k MoveScore ([I)V
-	METHOD l bigring_draw ()V
-	METHOD l hcol ()Z
 	METHOD l MoveNormalTama ([I)V
-	METHOD m bigring_move ()V
-	METHOD m speedset (I)V
 	METHOD m MoveKaniTama ([I)V
-	METHOD n drawSoftkeys ()V
-	METHOD n paramChk ()Z
-	METHOD n addObjectSet (I)V
 	METHOD n MoveButaTama ([I)V
-	METHOD o initGoleStart ()V
 	METHOD o ballchk ()Z
 	METHOD o MoveBroboTama ([I)V
-	METHOD p initStageStart ()V
-	METHOD p setMarquee (I)V
+	METHOD p TK_SetMarquee (I)V
 	METHOD p MoveUni2Tama ([I)V
 	METHOD q countClear ()V
 	METHOD q MoveImoTama ([I)V
-	METHOD r closeStream ()V
+	METHOD r fcol_r ()Z
 	METHOD r MoveMusiKemuri ([I)V
-	METHOD s MoveFireball ([I)V
-	METHOD t play00walk ()Z
+	METHOD s fcol_l ()Z
 	METHOD t MoveFireball2 ([I)V
 	METHOD u playerPushSet ()V
-	METHOD u MoveFireball3 ([I)V
-	METHOD v fallchk ()Z
-	METHOD v MoveFireball4 ([I)V
-	METHOD w playdamageset ()V
 	METHOD w MoveFireball5 ([I)V
-	METHOD x playerDie ()V
 	METHOD x MoveKazarifire ([I)V
 	METHOD y MoveDBlock ([I)V
 	METHOD z moveObjData ()V
-	METHOD z drawExplosion ([I)V
+	METHOD a BossSLHitTekkyu (I)Z
+	METHOD a createImage (Ljava/lang/String;)Ljavax/microedition/lcdui/Image;
+	METHOD a setWipe (ZI)V
+	METHOD a characterDefault ([I)V
+	METHOD w isHitBossSB ()Z
 CLASS d SoundManager
 	FIELD a currentMusicIndex I
 	FIELD a currentMusicPlayer Ljavax/microedition/media/Player;

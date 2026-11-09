@@ -1,4 +1,4 @@
-CLASS AppTHQwale AppTHQDash
+CLASS AppTHQwale AppTHQwale
 	FIELD A _forceCustomResourceReload Z
 	FIELD B _outfitsLoaded Z
 	FIELD C _soundsLoaded Z
@@ -237,7 +237,6 @@ CLASS AppTHQwale AppTHQDash
 	METHOD y intToFixed (I)I
 	METHOD z getSoundEffectVolumeLevel ()I
 	METHOD z _shouldBeLoadedAsAdditionalOutfit (I)Z
-CLASS b AssertionFailedException
 CLASS f AppCanvas
 	METHOD sizeChanged recordableKeyReleased (II)V
 CLASS g Clock
@@ -251,4 +250,3 @@ CLASS g Clock
 	METHOD b pause ()V
 	METHOD c stop ()V
 	METHOD d update ()V
-CLASS m DummyCanvas

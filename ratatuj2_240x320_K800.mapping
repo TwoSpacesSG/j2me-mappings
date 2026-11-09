@@ -1,4 +1,4 @@
-CLASS AppTHQrnfc AppTHQDash
+CLASS AppTHQrnfc AppTHQrnfc
 	FIELD F _debugConsoleVisible Z
 	FIELD G _fullRepaintInternal Z
 	FIELD H _fullRepaintPublic Z
@@ -235,6 +235,5 @@ CLASS c Clock
 	METHOD b pause ()V
 	METHOD c stop ()V
 	METHOD d update ()V
-CLASS g AssertionFailedException
 CLASS h AppCanvas
 	METHOD sizeChanged recordableKeyReleased (II)V

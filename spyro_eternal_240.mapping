@@ -8,7 +8,6 @@ CLASS b AALDevice
 	FIELD a s_soundPlayer Ljavax/microedition/media/Player;
 	FIELD a s_anyKeyPressed Z
 	FIELD a s_commandTypes [B
-	FIELD a s_volumeNamesArray [Ljavax/microedition/media/Player;
 	FIELD b s_height I
 	FIELD b s_anyKeyPressedAsync Z
 	FIELD c s_commandReceivedIndex I
@@ -18,12 +17,15 @@ CLASS b AALDevice
 	FIELD e s_virtualKeysReleased I
 	FIELD f s_virtualKeysDown I
 	FIELD g s_soundId I
-	FIELD h s_soundSfxBits I
 	FIELD i s_leftSoftkeyCommandIndex I
 	FIELD j s_rightSoftkeyCommandIndex I
 	FIELD k s_clearSoftkeyCommandIndex I
-	FIELD l s_commandReceivedIndexAsync I
-	FIELD m s_virtualKeysPressedAsync I
+	FIELD a s_soundThread Ljava/io/DataInputStream;
+	FIELD a s_volumeNamesArray [Ljava/lang/String;
+	FIELD l s_midleSoftkeyCommandIndex I
+	FIELD h s_soundLoopCount I
+	FIELD m s_commandReceivedIndexAsync I
+	FIELD a s_soundContentTypes [Ljavax/microedition/media/Player;
 	METHOD a viewportSetBounds (IIII)V
 	METHOD a soundSetEnabled (Z)V
 	METHOD b updateCommandHandler ()V
@@ -41,9 +43,10 @@ CLASS c AALMidlet
 	FIELD a s_exitRequested Z
 	FIELD b s_elapsedTimeClamped I
 	FIELD b s_previousTimeStamp J
-	FIELD b s_dispatchSizeChanged Z
 	FIELD c s_midletState I
-	FIELD c s_dispatchPauseApp Z
+	FIELD d s_dispatchPauseApp Z
+	FIELD c s_dispatchSizeChanged Z
+	FIELD b s_dispatchResumeApp Z
 	METHOD a exit ()V
 CLASS d GTKAnim
 	FIELD a m_modelLayerDataArrayShort [S
