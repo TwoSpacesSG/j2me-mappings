@@ -1,170 +1,294 @@
-CLASS RMIDlet
-	METHOD pauseApp pauseMainApp ()V
 CLASS b com/rovio/mobile/ui/ContentItem
+	METHOD <init> (Ljava/lang/String;IIII)V
+		ARG 1 text
+		ARG 2 preferredWidth
+		ARG 3 font
+		ARG 4 formatting
+		ARG 5 image
+	METHOD a draw (IIII)V
+		ARG 1 x
+		ARG 2 y
+		ARG 3 fontColor
+		ARG 4 effectColor
+	METHOD a parseMetadata (Ljava/lang/String;)V
+		ARG 1 metadata
 	FIELD a IMAGE_MARGIN I
 	FIELD a m_textData Ljava/lang/String;
 	FIELD a m_wrapBoxEnabled Z
 	FIELD a m_textDataArray [Ljava/lang/String;
-	FIELD b m_image I
-	FIELD c m_width I
-	FIELD d m_formatting I
-	FIELD e m_font I
-	FIELD f m_fontEffect I
-	FIELD g m_wrapBoxLineCount I
-	FIELD h m_wrapBoxLineWidth I
-	FIELD i m_lineCount I
-	FIELD j m_wrapBoxHeight I
-	FIELD k m_wrapBoxWidth I
-	METHOD a draw (IIII)V
-	METHOD a parseMetadata (Ljava/lang/String;)V
+	FIELD b m_width I
+	FIELD c m_height I
+	FIELD d m_image I
+	FIELD e m_formatting I
+	FIELD f m_font I
+	FIELD g m_fontEffect I
+	FIELD h m_wrapBoxLineCount I
+	FIELD i m_wrapBoxLineWidth I
+	FIELD j m_lineCount I
+	FIELD k m_wrapBoxHeight I
+	FIELD l m_wrapBoxWidth I
 CLASS f com/rovio/mobile/ui/MenuItem
+	METHOD <init> (Ljava/lang/String;ILh;I)V
+		ARG 1 text
+		ARG 2 spriteId
+		ARG 3 menuPage
+		ARG 4 actionId
+	METHOD a getWidth ()I
+	METHOD a isSelectable ()Z
+	METHOD a getItemProperty (I)I
+		ARG 1 propertyIndex
+	METHOD a setItemProperty (II)V
+		ARG 1 propertyIndex
+		ARG 2 value
+	METHOD a setContent (Ljava/lang/String;I)V
+		ARG 1 text
+		ARG 2 spriteId
+	METHOD b getHeight ()I
 	FIELD a action I
 	FIELD a content Lb;
 	FIELD a page Lh;
 	FIELD a enabled Z
-	FIELD a softkeyLabel Ljava/lang/String;
 	FIELD a itemProperties [I
-	METHOD a setFBAValue (II)V
-	METHOD a getItemProperty (I)I
 CLASS h com/rovio/mobile/ui/MenuPage
+	METHOD a getSelectedIndex ()I
+	METHOD a getActiveItem ()Lf;
+	METHOD a clear ()V
+	METHOD a getItemTop (I)I
+		ARG 1 itemIndex
+	METHOD a setSelectedItem (I)V
+		ARG 1 newSelectedIndex
+	METHOD a isItemVisible (I)Z
+		ARG 1 index
+	METHOD a setItemProperty (II)V
+		ARG 1 propertyIndex
+		ARG 2 value
+	METHOD a createPropertyBlock (II[II)[I
+		ARG 0 fieldIndex
+		ARG 1 value
+		ARG 2 fb
+		ARG 3 propertyBlockId
+	METHOD a setPageActionLabel (ILjava/lang/String;I)V
+	METHOD a setPageAction (ILjava/lang/String;IIZ)V
+		ARG 1 actionPriority
+		ARG 2 softkeyLabel
+		ARG 3 softkeyTag
+		ARG 4 actionId
+		ARG 5 functionKeyEnabled
+	METHOD a isPropertyValueSpecified (I[I)Z
+		ARG 0 fieldIndex
+		ARG 1 fb
+	METHOD a getPropertyValue (I[II)I
+		ARG 0 fieldIndex
+		ARG 1 block
+		ARG 2 propertyBlockId
+	METHOD a addItem (Lf;)V
+		ARG 1 item
+	METHOD a getItemLeft (Lf;I)I
+		ARG 0 item
+		ARG 1 contentAreaWidth
+	METHOD a getPropertyBlock (Ljava/io/DataInputStream;[III)[I
+		ARG 0 dis
+		ARG 1 enumFieldMasks
+		ARG 2 rgb555Start
+		ARG 3 rgb555End
+	METHOD a setTitle (Ljava/lang/String;II)V
+		ARG 1 text
+		ARG 2 spriteId
+		ARG 3 titleStyle
+	METHOD b getContentAreaWidth ()I
+	METHOD b setCorrectSoftkeyLabels ()V
+	METHOD b getHeightAttribute (I)I
+		ARG 1 region
+	METHOD b removePageAction (I)V
+		ARG 1 actionPriority
+	METHOD b setPageProperty (II)V
+		ARG 1 propertyIndex
+		ARG 2 value
+	METHOD c getPageWidth ()I
+	METHOD c update ()V
+	METHOD c getPageProperty (I)I
+		ARG 1 propertyIndex
+	METHOD d getContentHeight ()I
+	METHOD d paint ()V
+	METHOD d loadProperties (I)V
+		ARG 1 resourceId
+	METHOD e getContentVisibleHeight ()I
+	FIELD a pageId I
 	FIELD a m_titleCi Lb;
 	FIELD a m_items Ljava/util/Vector;
+	FIELD a itemProperties [I
+	FIELD a m_pageActionSkLabels [Ljava/lang/String;
 	FIELD b m_selectedItem I
+	FIELD b pageProperties [I
 	FIELD c m_scrollY I
 	FIELD c m_pageActionData [I
 	FIELD d m_titleImage I
+	FIELD d m_pageActionSkTags [I
 	FIELD e m_titleTime I
 	FIELD e ITEM_CLIP_BUFFER [I
 	FIELD f m_titleOffset I
-	FIELD g m_titleScrollFactor I
 	FIELD f ITEM_PROPERTY_ENUMERATION_MASKS [I
-	FIELD h PAGE_PROPERTY_ENUMERATION_MASKS [I
-	FIELD d m_pageActionSkTags [I
-	FIELD a itemProperties [I
-	FIELD b pageProperties [I
-	FIELD a m_pageActionSkLabels [Ljava/lang/String;
-	FIELD a pageId I
-	FIELD i PAGE_PROPERTY_DEFAULTS [I
+	FIELD g m_titleScrollFactor I
 	FIELD g ITEM_PROPERTY_DEFAULTS [I
-	METHOD a getSelectedIndex ()I
-	METHOD a getActiveItem ()Lf;
-	METHOD a getItemTop (I)I
-	METHOD a isItemVisible (I)Z
-	METHOD a setFBAValue (II)V
-	METHOD a createFormattingBlock (II[II)[I
-	METHOD a getFormattingBlockValue (I[II)I
-	METHOD b setFBBValue (II)V
-	METHOD c getFBAValue (I)I
-	METHOD d getContentHeight ()I
-	METHOD a getItemLeft (Lf;I)I
+	FIELD h PAGE_PROPERTY_ENUMERATION_MASKS [I
+	FIELD i PAGE_PROPERTY_DEFAULTS [I
+CLASS m com/rovio/burnout2d/AppMain
+	METHOD b activateGameUI ()V
+	FIELD a sm_showAdvertisementNumber B
+	FIELD a m_splashScreenTime J
+	FIELD a m_activeMenuPage Lh;
+	FIELD b m_menuPage Lh;
 CLASS o com/rovio/mobile/Core
-	FIELD a sm_lastFrameTime J
-	FIELD a sm_workIndicatorMutex Ljava/lang/Object;
-	FIELD a midlet Ljavax/microedition/midlet/MIDlet;
-	FIELD a app Lm;
-	FIELD a sm_main Lo;
-	FIELD a sm_mainStarted Z
-	FIELD a sm_simpleSpriteData [B
-	FIELD a sm_applicationEventQueue [I
-	FIELD a sm_graphicsElementLookupTable [S
-	FIELD a sm_hfResourceEntryDatas [[S
-	FIELD b sm_typingLastTimePressed J
-	FIELD b sm_actionQueue [I
-	FIELD b coordinates [S
-	FIELD b sm_resourceGroups [[S
-	FIELD c sm_softkeyTags [I
-	FIELD d sm_workIndicatorRefreshInterval I
-	FIELD d sm_fontColors [I
-	FIELD e sm_applicationEventQueueSize I
-	FIELD e sm_hfPEData [I
-	FIELD f sm_actionQueueSize I
-	FIELD f sm_keyPressQueue [I
-	FIELD a sm_typingInputKeyHoldChar C
-	FIELD a WORD_DELIMITER_CHARACTERS [C
-	FIELD a sm_resourceCacheObjectFlags [Z
-	FIELD a CHAR_TABLE [[C
-	FIELD b sm_modifiedCharTable [[C
-	FIELD c screenHeight I
-	FIELD c sm_typingInputKeyHoldStartTime J
-	FIELD d sm_hfPEFileNames [Ljava/lang/String;
-	FIELD b screenWidth I
-	FIELD a frameDeltaTime I
-	FIELD g sm_allowCanvasHide Z
-	FIELD h sm_flipNextSpritePivots Z
-	FIELD i sm_localeDataRequested Z
-	FIELD j sm_musicEnabled Z
-	FIELD a sm_resourceCacheObjects [Ljavax/microedition/lcdui/Image;
-	FIELD a sm_fontCharMappings [Ljava/lang/Object;
-	FIELD c sm_interruptedCurrently Z
-	FIELD b sm_screenFlippingAllowed Z
-	FIELD f sm_quitRequested Z
-	FIELD e sm_inWork Z
-	FIELD d sm_interruptedRecently Z
-	FIELD b sm_systemEventMutex Ljava/lang/Object;
-	FIELD a sm_softkeyLabelsRequested [Ljava/lang/String;
-	FIELD a sm_systemFonts [Ljavax/microedition/lcdui/Font;
-	FIELD b sm_softkeyLabels [Ljava/lang/String;
-	FIELD c sm_handlers$48624bbd [Ljava/lang/String;
-	FIELD a sm_fontSourceImages [Lo;
-	FIELD m sm_currentFont I
-	FIELD l sm_fontEffect I
-	FIELD p sm_localeCount I
-	FIELD i sm_frameSkip I
-	FIELD j sm_currentPaintMode I
-	FIELD n FONT_CHAR_UNIMPLEMENTED_WIDTH I
-	FIELD k sm_defaultFontColorForText I
-	FIELD g sm_interruptionResumeMusic I
-	FIELD h sm_frameDeltaTimeMax I
-	FIELD o sm_flipNextSprite I
-	FIELD q sm_currentLocale I
-	FIELD b sm_currentEffect Ljavax/microedition/media/Player;
-	FIELD r sm_musicVolume I
-	FIELD s sm_currentlyLoopingMusic I
-	FIELD m sm_keyPressQueueIgnore Z
-	FIELD k sm_soundFXEnabled Z
-	FIELD v sm_keyStateTouched I
-	FIELD t sm_inputMode I
-	FIELD u sm_keyStateBits I
-	FIELD l sm_vibraEnabled Z
-	FIELD y sm_typingKeyRepeatedTimes I
-	FIELD x sm_typingLastKeyPressed I
-	FIELD w sm_keyPressQueueSize I
-	FIELD z sm_typingInputKeyHoldKeyId I
-	FIELD a sm_currentEffect Ljavax/microedition/media/Player;
-	FIELD a sm_graphics Ljavax/microedition/lcdui/Graphics;
-	FIELD b sm_resourceLoadList Ljavax/microedition/lcdui/Graphics;
-	FIELD a sm_resourceReleaseList Ljava/util/Vector;
-	FIELD b sm_currentMusic Ljava/util/Vector;
-	METHOD a getInputMode ()I
 	METHOD a getScreen ()Ljavax/microedition/lcdui/Graphics;
 	METHOD a quitApp ()V
+	METHOD a isSoftKeyLayoutVertical ()Z
+	METHOD a openPackageEntry (I)Ljava/io/DataInputStream;
+		ARG 0 packageEntryId
+	METHOD a getResource (I)Ljava/lang/Object;
+		ARG 0 resourceId
 	METHOD a addAction (I)V
+		ARG 0 actionId
+	METHOD a getKeyState (I)Z
+	METHOD a getSpriteAttribute (II)I
+		ARG 0 spriteId
+		ARG 1 attribute
+	METHOD a setFont (II)V
+		ARG 0 fontId
+		ARG 1 fontEffect
 	METHOD a drawSprite (IIII)V
-	METHOD a cutClip (IIII[I)Z
+		ARG 0 x
+		ARG 1 y
+		ARG 2 spriteId
+		ARG 3 anchor
 	METHOD a setSoftkeyLabel (ILjava/lang/String;I)V
+		ARG 0 softkeyId
+		ARG 1 label
+		ARG 2 softkeyTag
+	METHOD a skipBytes (Ljava/io/DataInputStream;I)V
+		ARG 0 dis
+		ARG 1 skip
+	METHOD a cacheResourceTypeData$2bcaf2ec (Ljava/io/DataInputStream;I)Z
+		ARG 1 dis
+		ARG 2 resourceType
+	METHOD a getBytes (Ljava/io/InputStream;I)[B
+		ARG 0 dis
+		ARG 1 length
+	METHOD a splitText (Ljava/lang/String;IIZIIZ)[Ljava/lang/String;
+		ARG 0 text
+		ARG 1 preferredWidth
+		ARG 2 font
+		ARG 3 wrapBoxEnabled
+		ARG 4 wrapBoxWidth
+		ARG 5 wrapBoxHeight
+		ARG 6 trimToContent
 	METHOD a setScreen (Ljavax/microedition/lcdui/Graphics;)V
 	METHOD a getShort ([BI)S
+		ARG 0 data
+		ARG 1 offset
+	METHOD a cacheMusic ([BILjava/lang/String;)V
+		ARG 0 musicData
+		ARG 1 musicResourceId
+		ARG 2 fileName
+	METHOD b getSoftkeyLayout ()I
+	METHOD b removeSoftkeyLabels ()V
+	METHOD b isSoftKeyLayoutHorizontal ()Z
+	METHOD b isResourceCached (I)Z
+		ARG 0 resourceId
 	METHOD b getSpriteRefPoint (II)I
+		ARG 0 spriteId
+		ARG 1 refPointIndex
 	METHOD b setFontColor (II)V
+		ARG 0 colorPropertyId
+		ARG 1 colorValue
 	METHOD b drawAnimationFrame (IIII)V
+	METHOD c getSoftkeyBarHeight ()I
 	METHOD c clearBufferedKeyPresses ()V
-	METHOD c isMusicEnabled ()Z
+	METHOD c getSoftkeyAnchor (I)I
+		ARG 0 softkeyId
 	METHOD c setWorkIndicatorRefreshInterval (I)V
 	METHOD c getAnimationFrame (II)I
-	METHOD e getFont ()I
-	METHOD e cacheResource (I)V
-	METHOD f getLocale ()I
-	METHOD f releaseResource (I)V
+		ARG 1 frame
+	METHOD commandAction (Ljavax/microedition/lcdui/Command;Ljavax/microedition/lcdui/Displayable;)V
+		ARG 1 c
+		ARG 2 d
+	METHOD d getSoftkeyBarWidth ()I
+	METHOD d workRequested ()Z
+	METHOD d setInputMode (I)V
+		ARG 0 inputMode
+	METHOD d delegateKeyEvent (II)V
+		ARG 0 keyCode
+		ARG 1 eventType
+	METHOD e getScreenWidth ()I
+	METHOD e readHeadFile ()V
+	METHOD f flushLoadQueue ()V
+	METHOD g flushReleaseQueue ()V
+	METHOD g releaseResourceGroup (I)V
 	METHOD h frameReset ()V
+	METHOD h notifySystemEvent (I)V
+		ARG 0 event
 	METHOD i doWork ()V
 	METHOD i addApplicationEvent (I)V
-	METHOD l handleInterruption ()V
-	METHOD a isSoftKeyLayoutVertical ()Z
-	METHOD a splitText (Ljava/lang/String;IIZIIZ)[Ljava/lang/String;
-	METHOD b getSoftkeyLayout ()I
-	METHOD b isSoftKeyLayoutHorizontal ()Z
-	METHOD c getSoftkeyBarHeight ()I
-	METHOD c getSoftkeyAnchor (I)I
-	METHOD d getSoftkeyBarWidth ()I
+		ARG 0 eventId
 	METHOD j updateScreenSize ()V
+	METHOD k doUpdate ()V
 	METHOD k typingInputKeyHoldEnd (I)V
+		ARG 0 keyCode
+	METHOD l handleInterruption ()V
+	FIELD A sm_typingInputKeyHoldKeyId I
+	FIELD a sm_typingInputKeyHoldChar C
+	FIELD a frameDeltaTime I
+	FIELD a sm_workIndicatorMutex Ljava/lang/Object;
+	FIELD a sm_resourceLoadList Ljava/util/Vector;
+	FIELD a sm_currentMusic Ljavax/microedition/media/Player;
+	FIELD a midlet Ljavax/microedition/midlet/MIDlet;
+	FIELD a sm_main Lo;
+	FIELD a sm_mainStarted Z
+	FIELD a WORD_DELIMITER_CHARACTERS [C
+	FIELD a sm_applicationEventQueue [I
+	FIELD a sm_resourceCacheObjects [Ljava/lang/Object;
+	FIELD a sm_softkeyLabelsRequested [Ljava/lang/String;
+	FIELD a sm_systemFonts [Ljavax/microedition/lcdui/Font;
+	FIELD a sm_handlers$48624bbd [Lo;
+	FIELD a sm_resourceCacheObjectFlags [Z
+	FIELD a CHAR_TABLE [[C
+	FIELD a sm_hfResourceEntryDatas [[S
+	FIELD b screenWidth I
+	FIELD b sm_lastFrameTime J
+	FIELD b sm_systemEventMutex Ljava/lang/Object;
+	FIELD b sm_resourceReleaseList Ljava/util/Vector;
+	FIELD b sm_graphics Ljavax/microedition/lcdui/Graphics;
+	FIELD b sm_screenFlippingAllowed Z
+	FIELD b sm_actionQueue [I
+	FIELD b sm_softkeyLabels [Ljava/lang/String;
+	FIELD b coordinates [S
+	FIELD b sm_modifiedCharTable [[C
+	FIELD c screenHeight I
+	FIELD c sm_typingLastTimePressed J
+	FIELD c sm_softkeyTags [I
+	FIELD c sm_hfPEFileNames [Ljava/lang/String;
+	FIELD d sm_workIndicatorRefreshInterval I
+	FIELD d sm_typingInputKeyHoldStartTime J
+	FIELD d sm_interruptedCurrently Z
+	FIELD d sm_fontColors [I
+	FIELD e sm_applicationEventQueueSize I
+	FIELD e sm_interruptedRecently Z
+	FIELD e sm_hfPEData [I
+	FIELD f sm_actionQueueSize I
+	FIELD f sm_inWork Z
+	FIELD f sm_keyPressQueue [I
+	FIELD g sm_quitRequested Z
+	FIELD i sm_frameDeltaTimeMax I
+	FIELD k sm_keyPressQueueIgnore Z
+	FIELD l sm_defaultFontColorForText I
+	FIELD l sm_typingInputKeyHoldEnabled Z
+	FIELD m sm_fontEffect I
+	FIELD m sm_isModifiedCharTableEnabled Z
+	FIELD p sm_localeCount I
+	FIELD t sm_inputMode I
+	FIELD u sm_keyStateBits I
+	FIELD v sm_keyStateTouched I
+	FIELD x sm_keyPressQueueSize I
+	FIELD y sm_typingLastKeyPressed I
+	FIELD z sm_typingKeyRepeatedTimes I
+CLASS RMIDlet
+	METHOD startApp startMainApp ()V

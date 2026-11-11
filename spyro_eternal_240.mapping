@@ -1,40 +1,40 @@
 CLASS a AALTileset
-	FIELD a m_image Ljavax/microedition/lcdui/Image;
 	FIELD a m_rectsShort [J
 CLASS b AALDevice
-	FIELD a s_width I
-	FIELD a s_instance Lb;
-	FIELD a s_activeGraphics Ljavax/microedition/lcdui/Graphics;
-	FIELD a s_soundPlayer Ljavax/microedition/media/Player;
-	FIELD a s_anyKeyPressed Z
-	FIELD a s_commandTypes [B
-	FIELD b s_height I
-	FIELD b s_anyKeyPressedAsync Z
-	FIELD c s_commandReceivedIndex I
-	FIELD c s_soundIsSoundEnabled Z
-	FIELD d s_virtualKeysPressed I
-	FIELD d s_vibrationEnabled Z
-	FIELD e s_virtualKeysReleased I
-	FIELD f s_virtualKeysDown I
-	FIELD g s_soundId I
-	FIELD i s_leftSoftkeyCommandIndex I
-	FIELD j s_rightSoftkeyCommandIndex I
-	FIELD k s_clearSoftkeyCommandIndex I
-	FIELD a s_soundThread Ljava/io/DataInputStream;
-	FIELD a s_volumeNamesArray [Ljava/lang/String;
-	FIELD l s_midleSoftkeyCommandIndex I
-	FIELD h s_soundLoopCount I
-	FIELD m s_commandReceivedIndexAsync I
-	FIELD a s_soundContentTypes [Ljavax/microedition/media/Player;
-	METHOD a viewportSetBounds (IIII)V
+	METHOD a removeAllCommands ()V
+	METHOD a soundIsSupported ()Z
+	METHOD a getCommandIndexFromSoftkey (I)I
 	METHOD a soundSetEnabled (Z)V
 	METHOD b updateCommandHandler ()V
 	METHOD b vibrationIsSupported ()Z
-	METHOD b getVirtualKeyCodeFromRawKeyCode (I)I
 	METHOD c clearKeyStates ()V
 	METHOD c soundIsEnabled ()Z
+	METHOD c addCommand (I)V
 	METHOD d updateKeyboardHandler ()V
+	METHOD d onSoftkeyPressed (I)V
+	METHOD f soundCloseCurrentPlayer ()V
+	FIELD a s_instance Lb;
+	FIELD a s_soundPlayer Ljavax/microedition/media/Player;
+	FIELD a s_anyKeyPressed Z
+	FIELD a s_commandTypes [B
+	FIELD b s_anyKeyPressedAsync Z
+	FIELD c s_commandReceivedIndex I
+	FIELD g s_leftSoftkeyCommandIndex I
+	FIELD h s_rightSoftkeyCommandIndex I
+	FIELD i s_commandReceivedIndexAsync I
+	FIELD k s_virtualKeysReleasedAsync I
+	FIELD l s_virtualKeysDownAsync I
 CLASS c AALMidlet
+	METHOD a exit ()V
+	METHOD a notifyExternalEvent (I)V
+	METHOD b onInitApp ()V
+	METHOD c onPauseApp ()V
+	METHOD d onResumeApp ()V
+	METHOD e onDestroyApp ()V
+	METHOD f onSizeChanged ()V
+	METHOD g update ()V
+	METHOD h onRun ()V
+	METHOD i postDraw ()V
 	FIELD a s_elapsedTimeReal I
 	FIELD a s_currentTimeStamp J
 	FIELD a s_instance Lc;
@@ -43,13 +43,47 @@ CLASS c AALMidlet
 	FIELD a s_exitRequested Z
 	FIELD b s_elapsedTimeClamped I
 	FIELD b s_previousTimeStamp J
-	FIELD c s_midletState I
-	FIELD d s_dispatchPauseApp Z
-	FIELD c s_dispatchSizeChanged Z
 	FIELD b s_dispatchResumeApp Z
-	METHOD a exit ()V
+	FIELD c s_midletState I
+	FIELD c s_dispatchSizeChanged Z
+	FIELD d s_dispatchPauseApp Z
 CLASS d GTKAnim
-	FIELD a m_modelLayerDataArrayShort [S
+	METHOD a loadAnimation (II)Ld;
+	METHOD a addFrameLayer (IIIIII)V
+	FIELD a m_modelTotalDuration I
 	FIELD b m_modelBehaviour I
 	FIELD b m_modelFrameTimeLimit [S
-	METHOD a getLoopMode ()I
+CLASS SNBMidlet BSC4Midlet
+	METHOD T updateBSC4Control ()V
+	METHOD a getNextOrPrevMenuItemIndex (III)I
+	METHOD a setViewport (IIII)V
+	METHOD a resetTextBox (IIIIIII)V
+	METHOD a easyInOut (JJ)J
+	METHOD a drawTile (La;IIII)V
+	METHOD a createTilemap ([La;[Ld;[B[BIIII)V
+	METHOD ap setViewport (I)V
+	METHOD b onInitApp ()V
+	METHOD c onPauseApp ()V
+	METHOD c getLocalizedString (I)Ljava/lang/String;
+	METHOD d onResumeApp ()V
+	METHOD d getRandomInt (II)I
+	METHOD dS setBSC4DefaultSettings ()V
+	METHOD e onDestroyApp ()V
+	METHOD f onSizeChanged ()V
+	METHOD ff popSoftkeys ()V
+	METHOD fo initCallToAction ()V
+	METHOD g update ()V
+	METHOD h onRun ()V
+	METHOD i postDraw ()V
+	METHOD j canShowCallToActionScreen ()Z
+	METHOD k toolsWrapString (II)V
+	FIELD a s_random Ljava/util/Random;
+	FIELD aS MENUITEMTYPE_TO_MENUITEMLINEHEIGHT [I
+	FIELD aY MENUITEM_TO_MENUITEMTYPE [I
+	FIELD bg s_tilemapAnimInstances [I
+	FIELD c s_gameState I
+	FIELD fc s_tilemapNumCols I
+	FIELD fe s_tilemapTileWidth I
+	FIELD ff s_tilemapTileHeight I
+	FIELD fg s_tilemapWidth I
+	FIELD n BSC4_TILESETS [I

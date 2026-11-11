@@ -1,239 +1,163 @@
-CLASS AppTHQrnfc AppTHQrnfc
-	FIELD F _debugConsoleVisible Z
-	FIELD G _fullRepaintInternal Z
-	FIELD H _fullRepaintPublic Z
-	FIELD H _tan [I
-	FIELD I _stateSpecificOperationAlreadyPerformed Z
-	FIELD I _virtualCharCodes [I
-	FIELD J _stateSpecificThreadAlreadyStarted Z
-	FIELD J _currentCommands [I
-	FIELD K _inTransition Z
-	FIELD K _lastState [I
-	FIELD L _pointerActOnRelease Z
-	FIELD L _frameRateTimeStamps [I
-	FIELD M _pointerActOnDown Z
-	FIELD M _loadingThreadAdditionalOutfits [I
-	FIELD N _shouldCallStopSoundBeforeResourceLoading Z
-	FIELD O _forceCustomResourceReload Z
-	FIELD P _outfitsLoaded Z
-	FIELD Q _soundsLoaded Z
-	FIELD R _customResourcesLoaded Z
-	FIELD S _highPriorityCustomResourcesLoaded Z
-	FIELD T _loadingThreadStarted Z
-	FIELD U _loadingThreadDone Z
-	FIELD V _languageSelectionNeeded Z
-	FIELD W _soundsInitialized Z
-	FIELD X _soundSystemPaused Z
-	FIELD Y _splashScreensShown Z
-	FIELD Z _ignorePauseEvents Z
-	FIELD a splashIndex I
-	FIELD a _currentFont Lb;
-	FIELD a splash Lh;
-	FIELD a _resourceHashtable Li;
-	FIELD a NIMBUS_LOCK Ljava/lang/Object;
-	FIELD a _fonts [Li;
-	FIELD a _outfits [Ljava/lang/Thread;
-	FIELD a _palettes [Ljavax/microedition/lcdui/Font;
-	FIELD a _threads [Ljavax/microedition/lcdui/Image;
-	FIELD a _keyEventBuffer [S
-	FIELD a _stateCommands [[B
-	FIELD b _ASSERTION_FAILED_MSG Lc;
-	FIELD b _textBox Ljava/lang/Object;
-	FIELD bA _nextFrameRateTimeStampIndex I
-	FIELD bB _frameRate I
-	FIELD bC _firstStatusPaintTime I
-	FIELD bD _resourceLoadingState I
-	FIELD bE _customResourcesToLoadCount I
-	FIELD bF _customResourceIterator I
-	FIELD bG _adler32 I
-	FIELD bH _s1 I
-	FIELD bI _s2 I
-	FIELD bJ _indexedImageCount I
-	FIELD bK _nextColorizationIdx I
-	FIELD bL _cheatCode I
-	FIELD bM _lastSoftKeyPress I
-	FIELD bN _lastKeyPressTime I
-	FIELD bO _lastKeyReleaseTime I
-	FIELD bP _lastSoftKeyPressTime I
-	FIELD bQ _keyEventBufferReadIndex I
-	FIELD bR _keyEventBufferWriteIndex I
-	FIELD bS _currentFontLayerCount I
-	FIELD bT _lastProcessedIdx I
-	FIELD bU _speakCallbackTimer I
-	FIELD bV _speakCallbackStyle I
-	FIELD bW _languageCount I
-	FIELD bX _selectedLanguageIndex I
-	FIELD bY _sleepTicker I
-	FIELD bZ _soundCommandCount I
-	FIELD bq _currentMessageNumber I
-	FIELD br _currentState I
-	FIELD bs _lastTrigger I
-	FIELD bt _entryTime I
-	FIELD bu _timeout I
-	FIELD bv _lastPaintTime I
-	FIELD bw _lastComponentPrimaryCommand I
-	FIELD bx _pointerActTime I
-	FIELD by _FRAME_RATE_TIME_STAMP_COUNT I
-	FIELD bz _frameCount I
-	FIELD c _pointerLocker J
-	FIELD ca _corruptionDetectionTime I
-	FIELD cb _mediatimeDetectionTime I
-	FIELD cc _lastSoundCommandExecutionTime I
-	FIELD d _pointerLockElement J
-	FIELD e _pointerActionLockElement J
-	FIELD f _groupsLoadStartTime J
-	FIELD g _actions J
-	FIELD h _actionsOnCurrentTick J
-	FIELD h _list Ljava/lang/String;
-	FIELD i _actionReleases J
-	FIELD i _exitUrl Ljava/lang/String;
-	FIELD j _frameRateStr Ljava/lang/String;
-	FIELD k _selectedLanguage Ljava/lang/String;
-	FIELD s loadedResourceGroups [B
-	FIELD t _loadingThreadResourceGroupsToLoad [B
+CLASS c Clock
+	METHOD a nextRandomInt ()I
+	METHOD a start ()V
+	METHOD b _getParentTime ()J
+	METHOD b pause ()V
+	METHOD c stop ()V
+	METHOD d update ()V
+	FIELD a _totalPauseDuration J
+	FIELD a _parentClock Lc;
+	FIELD a _Random Ljava/util/Random;
+	FIELD b _state I
+	FIELD b _pauseTime J
+	FIELD c _startTime J
+CLASS h AppCanvas
+CLASS AppTHQrnfc AppTHQDash
 	METHOD A resetKeyPressTimes ()V
-	METHOD A hook_isJumpToCareerDayCheatUsed ()Z
-	METHOD B hook_isStoryContinueButtonVisible ()Z
-	METHOD C getCurrentLocalHighScorePageTitle ()Ljava/lang/String;
-	METHOD D hook_isTutorial ()Z
+	METHOD C performOperation (I)V
+	METHOD D hasDemoOnExitScreen ()Z
 	METHOD D performThreadStart (I)V
 	METHOD D commandKeyPressed (I)Z
 	METHOD E enterJunction (I)V
 	METHOD E enterTarget (I)Z
-	METHOD F getSoundEffectVolumeLevel ()I
-	METHOD G getDebugHints ()I
-	METHOD H getPointerCount ()I
-	METHOD I getGameMusicIndex ()I
-	METHOD I hook_selectLanguage ()V
-	METHOD J getHighEndTextBoxXOffset ()I
-	METHOD K hook_enterHighScoreNameInput ()V
-	METHOD M getHighEndTextBoxYOffset ()I
-	METHOD N load_GMGSimple ()V
-	METHOD P getStoryScreenCount ()I
-	METHOD P _unloadPalettes ()V
-	METHOD Q getAmbienceVolumeLevel ()I
+	METHOD F invokePredicate (I)Z
+	METHOD L _setUpTextBoxForCurrentState ()V
 	METHOD Q getTransitionRowIndex (I)I
-	METHOD R getStoryScreenNum ()I
-	METHOD R cheatsUsed ()Z
 	METHOD R getTransitionData (I)I
-	METHOD S hook_isResetInOptionsMenu ()Z
 	METHOD T _getCurrentThreadNumber ()I
-	METHOD T isDebugConsoleVisible ()Z
-	METHOD U hook_setSoundsEnabled ()V
-	METHOD Y hook_useSpice ()V
-	METHOD Z _startStateMachine ()V
-	METHOD a getTextForState_ExitToOpenBrowserConfirm ()Lb;
-	METHOD a getTextForState_OpenBrowserConfirm ()Lc;
+	METHOD T _hideNotify ()V
+	METHOD V _pauseAppImpl ()V
+	METHOD X _nimbusStartApp ()V
+	METHOD X _loadNextResource ()Z
+	METHOD Y _startStateMachine ()V
+	METHOD Z _pauseStateMachine ()V
+	METHOD a getThemeByState ()I
+	METHOD a getViewportTopLeftCoordinates ()J
+	METHOD a getListComponent ()Lb;
+	METHOD a getClock ()Lc;
 	METHOD a getTextBoxComponent ()Li;
-	METHOD a getLanguageCode ()Ljava/lang/String;
-	METHOD a isDemoModeEnabled ()Z
-	METHOD a getSupportedLanguages ()[Ljava/lang/String;
+	METHOD a getGMGSimpleMenuItem ()Ljava/lang/String;
 	METHOD a normalizeAngle (I)I
-	METHOD a getOutfit (I)Ljava/lang/Object;
 	METHOD a getString (I)Ljava/lang/String;
 	METHOD a startThread (II)V
 	METHOD a limitBetween (III)I
+	METHOD a paintListBox (III)V
+	METHOD a defineElement (IIII)J
 	METHOD a _scroll (IIZI)I
+	METHOD a enterState (IZ)V
 	METHOD a elementWidth (J)I
+	METHOD a _initializeRoot (LAppTHQrnfc;)V
 	METHOD a _setTextBox (Li;)V
+	METHOD a _initTextBox (Li;IJIII)V
 	METHOD a _readFully (Ljava/io/DataInputStream;[BII)I
+	METHOD a loadResourceToResourceBuffer (Ljava/lang/String;)I
 	METHOD a extractToken (Ljava/lang/String;IC)Ljava/lang/String;
+	METHOD a loadResourceToResourceBuffer (Ljava/lang/String;IZ)I
 	METHOD a resolveTokenIndex (Ljava/lang/String;Ljava/lang/String;)I
+	METHOD a _expandTag (Ljava/lang/StringBuffer;ILjava/lang/String;)V
 	METHOD a updateAdler32 (Z[BII)J
 	METHOD a readInt ([BI)I
-	METHOD a readShort ([BI)S
 	METHOD a writeInt ([BII)I
 	METHOD a calculateCRC ([BII)J
-	METHOD aA _finishOutfitLoading ()V
-	METHOD aB hook_prepareLanguageMenu ()V
 	METHOD aC resetAnims ()V
-	METHOD aF hook_startTutorial ()V
-	METHOD aG _stopAllSoundsInstantly ()V
-	METHOD aV _updateStateMachineClock ()V
-	METHOD aa _pauseStateMachine ()V
-	METHOD ab _stopStateMachine ()V
-	METHOD ao skipOutro ()V
-	METHOD aq _pauseMainLoop ()V
-	METHOD ar execute_changeLanguage ()V
-	METHOD as unload_GMGSimple ()V
-	METHOD aw hook_enableBrowser ()V
-	METHOD ax hook_disableBrowser ()V
-	METHOD b getProgressStepCount ()I
+	METHOD aa _stopStateMachine ()V
+	METHOD aa areCommandsChanged ()Z
+	METHOD ab _updateStateMachineClock ()V
+	METHOD ad refreshCommands ()V
 	METHOD b createTextBox_Page ()Li;
+	METHOD b getPositiveRandom (I)I
 	METHOD b paintScreen_HighScoreNameInputScreen (I)V
+	METHOD b _getFieldOffset (III)I
 	METHOD b elementHeight (J)I
 	METHOD b _calculateTokenCount (Ljava/lang/String;)I
 	METHOD b convertUnicodeToChar (Ljava/lang/String;)Ljava/lang/String;
-	METHOD b restoreLanguage ([BI)I
 	METHOD b calculateAdler32 ([BII)J
-	METHOD bP hook_setSoundsDisabled ()V
-	METHOD bQ playFireworksEffect ()V
-	METHOD bS _startMainLoop ()V
-	METHOD bc restoringLanguageFailed ()V
-	METHOD bi hook_setCareerInBetweenDays ()V
-	METHOD bp hook_tickEnterHighScoreName ()V
-	METHOD c storeLanguage ([BI)I
-	METHOD cI hook_stopGameLogic ()V
-	METHOD cM hook_tickLevelResultScreenTutorial ()V
-	METHOD cO hook_tickLevelResultScreenEndlessShift ()V
-	METHOD cP initializeAtPlatformStartup ()V
-	METHOD cT hook_initializationFailed ()V
-	METHOD cW hook_stopAllSounds ()V
-	METHOD cZ initGameModes ()V
-	METHOD ce hook_languageChanged ()V
+	METHOD bX initGetMoreGamesSimple ()V
+	METHOD c countBits (I)I
+	METHOD c getCommandLabel (I)Ljava/lang/String;
+	METHOD c setCamera (II)V
+	METHOD c angle (J)I
+	METHOD d _loadNextSound ()Z
 	METHOD d shouldDoDelayedKeyDrivenAction (II)I
+	METHOD d _setVolumeLevel (II)V
+	METHOD d initStringBuffer (Ljava/lang/String;)V
+	METHOD d _paintAppCanvas (Ljavax/microedition/lcdui/Graphics;II)V
+	METHOD d _startAppImpl (Z)V
 	METHOD dU _closeSoundDataStreamIfExists ()V
-	METHOD dX resetEndlessShift ()V
-	METHOD e getProgressCurrentStep ()I
+	METHOD dW _resolveActiveLanguages ()V
+	METHOD e _loadNextString ()Z
 	METHOD e multiply (II)I
-	METHOD e setShouldCallStopSoundBeforeResourceLoading (Z)V
+	METHOD ea enterSelect ()V
+	METHOD ec swapComponentCommands ()V
+	METHOD ed enterCurrentState ()V
+	METHOD ee exitCurrentState ()V
+	METHOD eg setTimeoutForCurrentState ()V
+	METHOD f _isActionSet (I)Z
 	METHOD f divide (II)I
-	METHOD g getPrimarySoftKeyLabel ()Ljava/lang/String;
-	METHOD g unloadSplash_THQ ()V
-	METHOD g getGameModeLabel (I)Ljava/lang/String;
-	METHOD g _handleSoftKey (I)Z
-	METHOD h getBrowserTheme ()I
-	METHOD h getSecondarySoftKeyLabel ()Ljava/lang/String;
-	METHOD h restoringOptionsFailed ()V
-	METHOD i getSelectedLanguageIndex ()I
-	METHOD i getTextForState_HelpView ()Ljava/lang/String;
-	METHOD i _initSoundSupport ()V
+	METHOD h getLastKeyPressTime ()I
+	METHOD h isApplicationSuspended ()Z
+	METHOD h _keyPressed (I)V
+	METHOD h stopRequestedForCurrentThread (I)Z
+	METHOD h hasGameTicksElapsedSince (II)Z
+	METHOD i getLastKeyReleaseTime ()I
+	METHOD i isFullRepaint ()Z
+	METHOD i _keyReleased (I)V
 	METHOD i performCommand (I)Z
-	METHOD j getLastKeyReleaseTime ()I
 	METHOD j _executeLastTrigger ()Z
 	METHOD j _sendActionEvent (I)Z
-	METHOD k getPlatformInitializationState ()I
+	METHOD k _loadAudioData ()V
+	METHOD k _triggerNow (I)Z
+	METHOD l _getRowCount (I)I
+	METHOD l setTutorialTimer (I)V
 	METHOD m sqrtF (I)I
 	METHOD n atan (I)I
+	METHOD n requestStopThread (I)V
 	METHOD o getCurrentStateTimePassed ()I
-	METHOD o getCurrentAboutPageTitle ()Ljava/lang/String;
-	METHOD o hook_isLanguageSelectionNeeded ()Z
-	METHOD o setMusicVolumeLevel (I)V
-	METHOD p execute_loadOutroSplash ()V
-	METHOD p hook_wasBrowserEnteredFromGetMoreGamesSimple ()Z
-	METHOD q getLanguageCount ()I
-	METHOD q getOppositeAngle (I)I
+	METHOD o angleToIndex (I)I
+	METHOD o startThread (I)V
+	METHOD p _initSoundSupport ()V
+	METHOD p startAnim (I)V
+	METHOD q getCurrentState ()I
 	METHOD q trigger (I)V
-	METHOD r getCurrentState ()I
-	METHOD r getTypeFromInfo (I)I
+	METHOD r _initStringSupport ()V
 	METHOD r _getLanguageName (I)Ljava/lang/String;
-	METHOD s hook_isOptionsSaveRequired ()Z
-	METHOD t getTextForState_SoundSelection ()Ljava/lang/String;
-	METHOD u forceCustomResourceReload ()V
-	METHOD u isUpgradeAvailable (I)Z
-	METHOD v getDemoModeMainMenuTitle ()Ljava/lang/String;
-	METHOD y getLastKeyPressTime ()I
+	METHOD s _openStringDataStreamIfNeeded ()V
+	METHOD s isMessageboxType (I)Z
+	METHOD v _initOutfitSupport ()V
 	METHOD y resetAllActions ()V
-CLASS c Clock
-	FIELD a _totalPauseDuration J
-	FIELD a _parentClock Lc;
-	FIELD b _time I
-	FIELD b _pauseTime J
-	FIELD c _startTime J
-	METHOD a nextRandomInt ()I
-	METHOD a start ()V
-	METHOD b pause ()V
-	METHOD c stop ()V
-	METHOD d update ()V
-CLASS h AppCanvas
-	METHOD sizeChanged recordableKeyReleased (II)V
+	METHOD z _shouldLoadSound (I)Z
+	FIELD I _stringOffsets [I
+	FIELD K _currentCommands [I
+	FIELD L _soundCommands [I
+	FIELD M _lastState [I
+	FIELD U _fullRepaintPublic Z
+	FIELD V _stateSpecificOperationAlreadyPerformed Z
+	FIELD Y _inTransition Z
+	FIELD a tickInterval I
+	FIELD a Instance LAppTHQrnfc;
+	FIELD a _textBox Li;
+	FIELD a _resourceStream Ljava/io/DataInputStream;
+	FIELD a NIMBUS_LOCK Ljava/lang/Object;
+	FIELD a _loadedStrings [Ljava/lang/String;
+	FIELD a _threads [Ljava/lang/Thread;
+	FIELD a _images [Ljavax/microedition/lcdui/Image;
+	FIELD a _keyEventBuffer [S
+	FIELD ap levelScoreEndlessShift I
+	FIELD bB _lastKeyPressTime I
+	FIELD bC _lastKeyReleaseTime I
+	FIELD bL _adler32 I
+	FIELD b _clock Lc;
+	FIELD b sb Ljava/lang/StringBuffer;
+	FIELD bM _s1 I
+	FIELD bN _s2 I
+	FIELD bQ _currentState I
+	FIELD bR _lastTrigger I
+	FIELD bT _entryTime I
+	FIELD bU _timeout I
+	FIELD bY _lastComponentPrimaryCommand I
+	FIELD b _dbResourceGroups [B
+	FIELD bx _imageCount I
+	FIELD f _crcTable [I
+	FIELD i _selectedLanguage Ljava/lang/String;
+	FIELD p upgradeMenuSelectionDone Z
+	FIELD y _applicationSuperState I

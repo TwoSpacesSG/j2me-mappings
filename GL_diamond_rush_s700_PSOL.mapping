@@ -1,0 +1,38 @@
+CLASS a cSprite
+	METHOD a GetAFrameTime (II)I
+	METHOD a BuildCacheImages (IIII)V
+	METHOD a UpdateStringSize (Ljava/lang/String;)V
+		ARG 1 s
+	METHOD a PaintFrame (Ljavax/microedition/lcdui/Graphics;IIIIII)V
+	METHOD a PaintAFrame (Ljavax/microedition/lcdui/Graphics;IIIIIII)V
+	METHOD a DrawString (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+		ARG 1 g
+		ARG 2 s
+		ARG 3 x
+		ARG 4 y
+		ARG 5 anchor
+	METHOD b DrawPage (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+		ARG 1 g
+		ARG 2 s
+		ARG 3 x
+		ARG 4 y
+		ARG 5 anchor
+	FIELD a _type S
+	FIELD a _alpha Z
+	FIELD a _pal [[I
+	FIELD c _text_w I
+	FIELD c _anims [S
+	FIELD d _text_h I
+CLASS g SpriteInstance
+	METHOD a IsAnimEnded ()Z
+	METHOD a SetAnim (I)V
+	METHOD a PaintSprite (Ljavax/microedition/lcdui/Graphics;)V
+	FIELD f _nCrtAnim I
+CLASS h cSoundServer
+CLASS i cGameCanvas
+	METHOD B ClearKeyBuffer ()V
+	METHOD a USHORT_OFF ([BI)I
+	METHOD ak FreeInGameImages ()V
+	FIELD d aiDropOneCardAnimYOffset [I
+CLASS GloftDIRU GloftPSOL
+	METHOD pauseApp startApp ()V

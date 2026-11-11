@@ -1,0 +1,28 @@
+CLASS a ASprite
+	METHOD a GetAFrameTime (II)I
+	METHOD a PaintFrame (Ljavax/microedition/lcdui/Graphics;IIIIII)V
+	METHOD a PaintAFrame (Ljavax/microedition/lcdui/Graphics;IIIIIII)V
+	METHOD b DrawPage (Ljavax/microedition/lcdui/Graphics;Ljava/lang/String;III)V
+		ARG 1 g
+		ARG 2 s
+		ARG 3 x
+		ARG 4 y
+		ARG 5 anchor
+	FIELD a _data_format S
+	FIELD a _modules_image [[Ljavax/microedition/lcdui/Image;
+CLASS g ASpriteInstance
+	METHOD <init> (La;IILg;)V
+		ARG 1 sprite
+	METHOD a setAnim (I)V
+		ARG 1 anim
+CLASS h cSoundServer
+	METHOD a startServer ()V
+CLASS i cGame
+	METHOD ak ResetLevelData ()V
+	METHOD as updateCursor ()V
+	METHOD b drawAllCells (Z)V
+		ARG 1 focus
+	METHOD ck shiftMoves ()V
+	METHOD e gen (II)I
+	FIELD c _menuText [I
+CLASS GloftDIRU GloftPSDK
