@@ -1,9 +1,7 @@
 ## Various J2ME mappings in Enigma format
-Most of these games are interesting to me, but only some other games by the same devs have unobfuscated versions. These mappings were made by me using Recaf.
-- Diamond Rush (Sony Ericsson S700 version 1.2.0) remapped from Platinum Solitaire (my419X) / Platinum Sudoku (Z370) / Full House Bingo (L6) / Mission Impossible III (6131) - only 2 engine classes match at all
-- Rayman Raving Rabbids (Sony Ericsson K750 version 1.0.2) remapped from Prince of Persia The Two Thrones (Moto V8) - only 2 engine classes match at all
-- WALL-E (Sony Ericsson 240x320) remapped from Star Wars: Cantina (LG) - 2 classes match (one of the matches is large)
-- Bounce Tales (Nokia 7210 Supernova) remapped from Totomi / Burnout (BlackBerry) / Need for Speed: Carbon (Nokia/Motorola) - only 4 engine classes match
-- Ratatouille: Cheese Rush (Sony Ericsson K800i) remapped from Star Wars: Cantina (LG) - 2 classes match (one of the matches is large)
+Most of these games are interesting to me, but only some other games by the same devs have unobfuscated versions. Therefore I made this repo for educational purposes (with mappings that have manual class matches and automatic other matches) to let people know what decomps can potentially start with. For these new uploads I used FabricMC Matcher.
+- Diamond Rush (Sony Ericsson S700 version 1.0.3) with two different mappings: a version matching from games that use cSprite/SpriteInstance/cGameCanvas such as Platinum Solitaire (Sagem my419X) which is likely to be more accurate, and a likely less accurate matching from games that use ASprite/ASpriteInstance/cGame, such as Platinum Sudoku (Samsung SGH-Z370). cSoundServer in both is matched from various games such as Mission Impossible III. Total list used: Asphalt Urban GT (Moto L6), Beowulf, Bikini Volleyball, Catchphrase, Chessmaster (S700, 6151), Crazy Campus, Full House Bingo, Medieval Combat (E250), Mission Impossible III, Platinum Solitaire, Platinum Sudoku (Z370), XIII.
+- Bounce Tales (Nokia 7210 Supernova) remapped from Totomi and Burnout (BlackBerry) - auto-matched various members in 4 engine classes (AppMain is Burnout's version)
+- WALL-E (Sony Ericsson 240x320) remapped from Star Wars: Cantina (LG) - auto-matched various members in the Midlet and "Clock", also there is a lower-effort Ratatouille: Cheese Rush mapping with less matched classes
 - Sonic the Hedgehog Part One (Nokia s60v3 / 6280) and Part Two (Nokia s60v2) remapped from 3 other versions - for the purpose of modding the former versions
-- The Legend of Spyro: The Eternal Night (Sony Ericsson K800i) remapped from Battleship and Connect 4 (Nokia/LG/BlackBerry) - 4 small engine classes match
+- The Legend of Spyro: The Eternal Night (Sony Ericsson K800i) remapped from Battleship & Connect 4 (Nokia/LG/BlackBerry), Tekken Mobile (Nokia/Samsung), Pac-Man Kart Rally (Nokia/Sony Ericsson) - matched 4 engine classes
